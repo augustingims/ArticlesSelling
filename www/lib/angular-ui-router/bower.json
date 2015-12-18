@@ -1,0 +1,31 @@
+{
+  "name": "angular-ui-router",
+<<<<<<< HEAD
+  "version": "0.2.7",
+  "main": "./release/angular-ui-router.js",
+  "dependencies": {
+    "angular": ">= 1.1.5"
+  }
+=======
+  "version": "0.2.13",
+  "main": "./release/angular-ui-router.js",
+  "dependencies": {
+    "angular": ">= 1.0.8"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "component.json",
+    "package.json",
+    "lib",
+    "config",
+    "sample",
+    "test",
+    "tests",
+    "ngdoc_assets",
+    "Gruntfile.js",
+    "files.js"
+  ]
+>>>>>>> c64a7789d7dabfaacea72dac08e5e8e615aa1214
+}

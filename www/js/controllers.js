@@ -50,6 +50,26 @@ angular.module('starter.controllers', [])
     ionicMaterialInk.displayEffect();
   })
 
-  .controller('AboutCtrl', function($scope) {
+
+    .controller('CategoriesCtrl', function($scope) {
+
+      $scope.text = 'toto';
+
+      $scope.image = [{
+        src: 'img/berangerphotos/img1.jpg',
+      }];
+
+      $scope.maList =[
+        {cat:"img/berangerphotos/img.jpg", id: 1},
+        {cat:'Yaoude', id: 2},
+        {cat:'Bafoussan', id: 3},
+        {cat:'Bertoua', id: 4},
+        {cat:'Garoua', id: 5},
+      ]
+
+    })
+
+
+    .controller('AboutCtrl', function($scope) {
 
   });

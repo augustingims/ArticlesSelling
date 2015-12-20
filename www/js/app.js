@@ -47,6 +47,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
       }
     })
 
+      .state('app.categories', {
+        url: '/categories',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/categories.html',
+            controller: 'CategoriesCtrl'
+          }
+        }
+      })
+
     .state('app.about', {
       url: '/about',
       views: {

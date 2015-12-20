@@ -1,6 +1,6 @@
 .expanded {
   background:royalblue;
-  background-size: 120%;
+  background-size: 100%;
   background-position: 0%;
   transition: all .5s ease-in-out;
 }
@@ -8,35 +8,41 @@
   width: 600%;
   height: 100px;
 }
-.box {
+.box img{
   display: inline-block;
   margin-right: 5px;
-  width: 120px;
+  width: 100px;
   height: 100px;
 }
-.custom img{
-  background-color: #4b8bf4;
+.btnAd{
+  margin: 10px;
 }
-.custom1 img{
-  background-color: #33cd5f;
+.icon1 {
+  color: #04d654;
+}.icon2 {
+  color: #ff4f0f;
+}.icon3 {
+  color: #e6b500;
+}.icon4 {
+  color: #0057e7;
+}.icon5 {
+  color: #673AB7;
+}.icon6 {
+  color: #d138c8;
+}.icon7 {
+  color: aqua;
+}.icon8 {
+  color: #a6e22e;
 }
-.custom2 img{
-  background-color: mediumspringgreen;
+.item-divider {
+  background-color: transparent;
+  margin-left: 10px;
 }
-.custom3 img{
-  background-color: #e42112;
+.element .item, .selectcat .item{
+  border-bottom: 1px solid #d1d3d6;
 }
-.custom3 .item, .custom .item,.custom1 .item, .custom2 .item{
-
-  border-bottom: none;
-  border-top: none;
-
-}
-.row .item p{
-  text-align: center;
-}
-.row .item img{
- border-radius: 30%;
+.select{
+  margin-left: 50px;
 }
 .app-icon {
   background-color: #fff;

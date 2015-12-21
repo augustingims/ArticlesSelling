@@ -1,0 +1,16 @@
+{
+  "name": "angular-sanitize",
+<<<<<<< HEAD
+  "version": "1.2.12",
+  "main": "./angular-sanitize.js",
+  "dependencies": {
+    "angular": "1.2.12"
+=======
+  "version": "1.4.3",
+  "main": "./angular-sanitize.js",
+  "ignore": [],
+  "dependencies": {
+    "angular": "1.4.3"
+>>>>>>> c64a7789d7dabfaacea72dac08e5e8e615aa1214
+  }
+}

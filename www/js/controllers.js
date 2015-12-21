@@ -14,6 +14,19 @@ angular.module('starter.controllers', [])
   .controller('mainhome', function($scope, $http,$timeout,$ionicPlatform,$rootScope,Weather,Geo) {
     var _this = this;
 
+      $scope.swiper = {};
+
+      $scope.onReadySwiper = function (swiper) {
+
+        swiper.on('slideChangeStart', function () {
+          console.log('slide start');
+        });
+
+        swiper.on('onSlideChangeEnd', function () {
+          console.log('slide end');
+        });
+      };
+
     this.getCurrent = function(lat, lng, locString) {
       Weather.getAtLocation(lat, lng).then(function(resp) {
         $scope.current = resp.data;

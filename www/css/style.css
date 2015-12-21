@@ -58,5 +58,12 @@
 .item-md-label {
    margin-left: 0px;
 }
+.col{
+  background-color: grey;
+}
+.tcol{
+  color: white;
+}
+
 
 

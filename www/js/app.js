@@ -113,6 +113,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
           }
         }
       })
+       
+        .state('app.categoriesDetail', {
+        url: '/categoriesDetail',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/categoriesDetail.html',
+            controller: 'CategoriesCtrl'
+          }
+        }
+      })
 
     .state('app.about', {
       url: '/about',

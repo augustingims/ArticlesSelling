@@ -1,7 +1,8 @@
 <ion-side-menus enable-menu-with-back-views="false">
   <ion-side-menu-content>
     <ion-nav-bar class="bar-balanced">
-      <ion-nav-back-button>
+      <ion-nav-back-button class="button-clear" transitiontype="flip" direction="right" go-native>
+        <i class="ion-arrow-left-c"></i>
       </ion-nav-back-button>
 
       <ion-nav-buttons side="left">
@@ -27,13 +28,28 @@
     <ion-content class="has-expanded-header">
       <ion-list>
         <ion-item nav-clear menu-close href="#/app/home">
-          <i class="ion ion-android-home"></i> Home
+          <h2> <i class="ion ion-android-home"></i>  Home</h2>
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/about">
           <i class="ion ion-information-circled"></i> About
         </ion-item>
+        <ion-item nav-clear menu-close href="#/app/ajouter">
+         <h2> <i class="ion ion-android-add-circle"></i>  ajouter</h2>
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/message">
+          <h2> <i class="ion ion-android-mail "></i>  message</h2>
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/favorite">
+          <h2> <i class="ion ion-android-favorite"></i>  favorite</h2>
+        </ion-item>
+        <ion-item >
+         <hr size="1" width="%">
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/setting">
+          <h2> <i class="ion ion-android-settings"></i>  favorite</h2>
+        </ion-item>
         <ion-item nav-clear menu-close href="#/app/login">
-          <i class="ion ion-information-circled"></i> login
+          <h2> <i class="ion ion-information-circled"></i>  login</h2>
         </ion-item>
         <ion-item menu-close href="#/app/categories">
           Categories

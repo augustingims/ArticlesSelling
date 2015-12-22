@@ -15,15 +15,16 @@
       </button>
     </div>
       <div class="item-divider">Lastest Article</div>
-       <ion-scroll direction="x">
-        <div class="slidebox">
-          <div class="box">
-           <img src="../img/slide/MaxPNG.png">
-           <img src="../img/slide/thinkcentreaio.jpg">
-           <img src="../img/slide/Toshiba_Laptop.jpg">
-         </div>
-          </div>
-      </ion-scroll>
+    <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="3" space-between="5" pagination-clickable="false" override-parameters="{effect: 'coverflow',coverflow: {rotate: 50,stretch: 0,depth: 100,modifier: 1,slideShadows : false}}"  on-ready="onReadySwiper(swiper)">
+      <ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6,7,8]">
+        <img ng-src="img/puppy-{{s}}.jpg" width="100%">
+      </ks-swiper-slide>
+    </ks-swiper-container>
+    <!-- <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="4" space-between="0" pagination-clickable="false"  on-ready="onReadySwiper(swiper)">
+			<ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6,7,8]">
+				<img ng-src="img/puppy-{{s}}.jpg" width="100%">
+			</ks-swiper-slide>
+		</ks-swiper-container>	-->
     <div class="list selectcat">
       <div class="item item-divider">Categories</div>
       <a class="item item-icon-left" href="#/app/technology">

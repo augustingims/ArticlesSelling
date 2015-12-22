@@ -1,7 +1,10 @@
+
 angular.module('starter.controllers', [])
 
-  .controller('starter', function($scope, ionicMaterialInk, ionicMaterialMotion, $ionicSideMenuDelegate, $timeout) {
 
+  .controller('starter', function($scope, ionicMaterialInk, ionicMaterialMotion, $ionicSideMenuDelegate, $timeout) {
+     $scope.maList =[];
+     $scope.selectedItemId="";
     $timeout(function(){
       ionicMaterialInk.displayEffect();
       ionicMaterialMotion.ripple();
@@ -13,6 +16,19 @@ angular.module('starter.controllers', [])
   })
   .controller('mainhome', function($scope, $http,$timeout,$ionicPlatform,$rootScope,Weather,Geo) {
     var _this = this;
+
+      $scope.swiper = {};
+
+      $scope.onReadySwiper = function (swiper) {
+
+        swiper.on('slideChangeStart', function () {
+          console.log('slide start');
+        });
+
+        swiper.on('onSlideChangeEnd', function () {
+          console.log('slide end');
+        });
+      };
 
     this.getCurrent = function(lat, lng, locString) {
       Weather.getAtLocation(lat, lng).then(function(resp) {
@@ -42,18 +58,23 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('LoginCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk) {
-    $scope.$parent.clearFabs();
-    $timeout(function() {
-      $scope.$parent.hideHeader();
-    }, 0);
-    ionicMaterialInk.displayEffect();
-  })
+    .controller('LoginCtrl', function($scope) {
 
+    })
+
+    .controller('SignUpCtrl', function($scope) {
+
+    })
 
     .controller('CategoriesCtrl', function($scope) {
 
-      $scope.text = 'toto';
+      $scope.text = 'asus  i3';
+
+      $scope.slideImg=[{img:"../img/berangerphotos/img1.jpg"},
+                       {img:"../img/slide/MaxPNG.png"},
+                       {img:"../img/slide/thinkcentreaio.jpg"},
+                       {img:"../img/berangerphotos/img3.jpg"}
+                      ]
 
       $scope.image = [{
         src: 'img/berangerphotos/img1.jpg',
@@ -66,6 +87,11 @@ angular.module('starter.controllers', [])
         {cat:'Bertoua', id: 4},
         {cat:'Garoua', id: 5},
       ]
+
+      $scope.selectedItemDetail=function(){
+      
+      $scope.selectedDetail=[ {cat:"img/berangerphotos/img.jpg", id: 1}];
+      }
 
     })
 

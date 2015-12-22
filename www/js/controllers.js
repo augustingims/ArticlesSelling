@@ -42,14 +42,13 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('LoginCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk) {
-    $scope.$parent.clearFabs();
-    $timeout(function() {
-      $scope.$parent.hideHeader();
-    }, 0);
-    ionicMaterialInk.displayEffect();
-  })
+    .controller('LoginCtrl', function($scope) {
 
+    })
+
+    .controller('SignUpCtrl', function($scope) {
+
+    })
 
     .controller('CategoriesCtrl', function($scope) {
 

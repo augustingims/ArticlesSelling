@@ -69,4 +69,33 @@
   margin-left: 10px;
 }
 
-
+.card {
+  margin: 5px;
+  padding: 0px;
+}
+.card {
+  box-shadow: 10px 2px 10px 0px rgba(0, 0, 0, 0.26);
+}
+.card, .list-inset {
+  border-radius: 1px;
+}
+.button.button-block,
+.button.button-full {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.signUp {
+  text-decoration: none;
+  text-align: center; color: darkorange;
+}
+.login {
+  text-decoration: none;
+  text-align: center; color: red;
+}
+.item-checkbox {
+  text-align: left; color: #4d4d4d;
+}
+.item-divider {
+  text-align: center;
+  color: #4d4d4d;
+}

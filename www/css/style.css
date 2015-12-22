@@ -68,5 +68,22 @@
 .alignement{
   margin-left: 10px;
 }
+.post{
+  padding-top: 5px;
+}
+.post-col-text{
+  padding-top: 12px;
+}
+.couleurText{
+  color: #0044cc;
+}
+.cadre-image > img:first-child{
+  border-radius: 5%
+}
+.dimension-image{
+  height:75px;
+  width:100px;
+  align:left;
+}
 
 

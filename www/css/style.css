@@ -1,12 +1,34 @@
 .expanded {
-  background:royalblue;
+  background-image: url("../img/login1.jpg");
   background-size: 100%;
   background-position: 0%;
   transition: all .5s ease-in-out;
 }
+.menu .bar.bar-header.expanded{
+  min-height: 100px;
+}
 .slidebox {
   width: 600%;
   height: 100px;
+}
+.headmenu {
+  top: 100px !important;
+}
+.locate {
+  margin-bottom: 0px;
+  height: 64px;
+}
+.headmenu .line {
+  border-bottom: 1px solid #d1d3d6;
+}
+.headmenu .item i {
+  width: 15px;
+  height: 15px;
+}
+.welcome {
+  bottom: 40px;
+  right: 110px;
+  left: 80px ;
 }
 .box img{
   display: inline-block;
@@ -15,7 +37,9 @@
   height: 100px;
 }
 .btnAd{
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: -15px;
 }
 .icon1 {
   color: #04d654;
@@ -75,11 +99,9 @@
 }
 .item-md-label {
    margin-left: 0px;
-}.coul {
-   color: #950B02;
 }
-.col{
-  background-color: grey;
+.coul {
+   color: #950B02;
 }
 .tcol{
   color: white;

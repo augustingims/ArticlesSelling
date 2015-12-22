@@ -78,6 +78,13 @@
 }.coul {
    color: #950B02;
 }
+.col{
+  background-color: grey;
+}
+.tcol{
+  color: white;
+}
+
 
 .alignement{
   margin-left: 10px;

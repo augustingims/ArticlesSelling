@@ -132,7 +132,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
           controller: 'AboutCtrl'
         }
       }
-    });
+    })
+      .state('app.message', {
+        url: '/message',
+        views: {
+          'menuContent' :{
+            templateUrl: 'templates/message.html',
+            controller: 'AboutCtrl'
+          }
+        }
+      })
+
+
 
     $urlRouterProvider.otherwise('/app/home');
   });

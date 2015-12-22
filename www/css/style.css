@@ -58,10 +58,16 @@
   color: white;
 }
 .detail{
-  height: 100px;
-  background-color: blue;
+  background-color: darkmagenta;
   border-width: 0px;
   margin: 0px;
+  padding: 10px;
+  margin-top: -6px;
+}
+.detail .col{
+  color: #ff4f0f;
+  text-align: center;
+  padding: 3px;
 }
 .log {
   background-image: url('../img/login1.jpg');
@@ -69,6 +75,8 @@
 }
 .item-md-label {
    margin-left: 0px;
+}.coul {
+   color: #950B02;
 }
 
 .alignement{

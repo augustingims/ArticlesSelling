@@ -1,6 +1,6 @@
 <ion-view view-title="SellYourArticle">
   <ion-content>
-    <div class="list">
+    <div class="list locate">
       <div class="item item-button-right">
         My location
         <p>{{currentLocationString}}</p>
@@ -14,7 +14,7 @@
         Submit Ad
       </button>
     </div>
-      <div class="item-divider">Lastest Article</div>
+      <div class="item-divider last">Lastest Article</div>
     <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="3" space-between="5" pagination-clickable="false" override-parameters="{effect: 'coverflow',coverflow: {rotate: 50,stretch: 0,depth: 100,modifier: 1,slideShadows : false}}"  on-ready="onReadySwiper(swiper)">
       <ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6,7,8]">
         <img ng-src="img/puppy-{{s}}.jpg" width="100%">
@@ -27,7 +27,7 @@
 		</ks-swiper-container>	-->
     <div class="list selectcat">
       <div class="item item-divider">Categories</div>
-      <a class="item item-icon-left" href="#/app/technology">
+      <a class="item item-icon-left" href="#/app/categories">
         <i class="icon icon1 ion-android-desktop"></i>
         Technology - Electronics
       </a>

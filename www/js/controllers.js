@@ -58,12 +58,20 @@ angular.module('starter.controllers', [])
 
   })
 
+    .controller('myAdsCtrl', function($scope) {
+
+    })
+
     .controller('LoginCtrl', function($scope) {
 
     })
 
     .controller('SignUpCtrl', function($scope) {
 
+    })
+
+    .controller('filterCtrl', function($scope) {
+        
     })
 
     .controller('CategoriesCtrl', function($scope) {

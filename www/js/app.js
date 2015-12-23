@@ -29,6 +29,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
       abstract: true,
       templateUrl: 'templates/menu.html'
     })
+    .state('app.filter', {
+      url: '/filter',
+      /*abstract: true,*/
+      views: {
+          'menuContent': {
+            templateUrl: 'templates/filter.html',
+            controller: 'filterCtrl'
+          }
+      }
+    })
     .state('app.home', {
       url: '/home',
       views: {
@@ -38,7 +48,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
         }
       }
     })
-      .state('app.login', {
+    .state('app.myAds', {
+      url: '/myAds',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/myAds.html',
+          controller: 'myAdsCtrl'
+        }
+      }
+    })
+  
+    .state('app.login', {
         url: '/login',
         views: {
           'menuContent': {

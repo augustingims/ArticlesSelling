@@ -186,4 +186,53 @@
   margin-left: 3px;
 }
 
+.card-color{
+    background-color:lightgray;
+}
 
+.crop {
+    width:1000px;
+    word-wrap:break-word;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height:20px;
+    line-height:20px;
+}
+
+.right{
+    float: right;
+}
+
+.color{
+    color: chocolate;
+}
+
+.wrap-content{
+    overflow:inherit;
+    text-overflow: inherit;
+    white-space: pre-wrap;
+}
+
+.item-thumbnail-left > img:first-child{
+    border-radius: 10%;
+}
+
+.negociable{
+    float: left;
+    font-size: small;
+    color: blue;
+}
+
+.color span{
+    color:chocolate;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.dim-btn button{
+  font-size: x-small;
+  height: 10px;
+  float: right;
+  border-radius: 100%;
+}

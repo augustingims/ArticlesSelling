@@ -38,14 +38,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
         }
       }
     })
-    .state('app.login', {
-      url: '/login',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/login.html'
+      .state('app.login', {
+        url: '/login',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/login.html',
+            controller: 'LoginCtrl'
+          },
         }
-      }
-    })
+      })
+
+      .state('app.signUp', {
+        url: '/login/:signUp',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/signUp.html',
+            controller: 'SignUpCtrl'
+          },
+        }
+      })
       .state('app.technology', {
         url: '/technology',
         views: {
@@ -132,7 +143,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
           controller: 'AboutCtrl'
         }
       }
-    });
+    })
+      .state('app.message', {
+        url: '/message',
+        views: {
+          'menuContent' :{
+            templateUrl: 'templates/message.html',
+            controller: 'AboutCtrl'
+          }
+        }
+      })
+
+
 
     $urlRouterProvider.otherwise('/app/home');
   });

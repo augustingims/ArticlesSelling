@@ -17,7 +17,13 @@
       <div class="item-divider last">Lastest Article</div>
     <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="3" space-between="5" pagination-clickable="false" override-parameters="{effect: 'coverflow',coverflow: {rotate: 50,stretch: 0,depth: 100,modifier: 1,slideShadows : false}}"  on-ready="onReadySwiper(swiper)">
       <ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6,7,8]">
+        <div class="feed-item">
+          <div class="feed-media">
         <img ng-src="img/puppy-{{s}}.jpg" width="100%">
+            <div class="feed-gradient-overlay"></div>
+            <h6 class="feed-title">15 000cfa</h6>
+          </div>
+        </div>
       </ks-swiper-slide>
     </ks-swiper-container>
     <!-- <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="4" space-between="0" pagination-clickable="false"  on-ready="onReadySwiper(swiper)">
@@ -27,16 +33,16 @@
 		</ks-swiper-container>	-->
     <div class="list selectcat">
       <div class="item item-divider">Categories</div>
-      <a class="item item-icon-left" href="#/app/technology">
+      <a class="item item-icon-left" href="#/app/categories">
         <i class="icon icon1 ion-android-desktop"></i>
         Technology - Electronics
       </a>
       <a class="item item-icon-left"  href="#/app/fashion">
         <i class="icon icon2 ion-tshirt"></i>
-        Fashion -
+        Fashion - Shoes
       </a>
       <a class="item item-icon-left"  href="#/app/furniture">
-        <i class="icon icon3"></i>
+        <i class="icon icon3 ion-ios-albums"></i>
         Home - Furniture - Garden
       </a>
       <a class="item item-icon-left"  href="#/app/hobbies">

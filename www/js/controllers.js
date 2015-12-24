@@ -58,7 +58,16 @@ angular.module('starter.controllers', [])
 
   })
 
+    .controller('AddCtrl', function($scope) {
+
+    })
     .controller('LoginCtrl', function($scope) {
+
+    })
+    .controller('SettingCtrl', function($scope) {
+
+    })
+    .controller('LocationCtrl', function($scope) {
 
     })
 
@@ -74,7 +83,7 @@ angular.module('starter.controllers', [])
                        {img:"../img/slide/MaxPNG.png"},
                        {img:"../img/slide/thinkcentreaio.jpg"},
                        {img:"../img/berangerphotos/img3.jpg"}
-                      ]
+                      ];
 
       $scope.image = [{
         src: 'img/berangerphotos/img1.jpg',
@@ -95,7 +104,33 @@ angular.module('starter.controllers', [])
 
     })
 
+    .controller('CategoriesfarmingCtrl', function($scope) {
 
+  })
+    .controller('CategoriesfashionCtrl', function($scope) {
+
+  })
+    .controller('CategoriesfurnitureCtrl', function($scope) {
+
+  })
+    .controller('CategorieshobbiesCtrl', function($scope) {
+
+  })
+    .controller('CategoriesrealCtrl', function($scope) {
+
+  })
+    .controller('CategoriesservicesCtrl', function($scope) {
+
+  })
+    .controller('CategoriesvehiculesCtrl', function($scope) {
+
+  })
+    .controller('FavoriteCtrl', function($scope) {
+
+  })
+    .controller('MessageCtrl', function($scope) {
+
+  })
     .controller('AboutCtrl', function($scope) {
 
   });

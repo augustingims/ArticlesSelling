@@ -38,12 +38,39 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
         }
       }
     })
+      .state('app.add', {
+      url: '/add',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/add.html',
+          controller: 'AddCtrl'
+        }
+      }
+    })
+      .state('app.favorite', {
+        url: '/favorite',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/favorite.html',
+            controller: 'FavoriteCtrl'
+          },
+        }
+      })
       .state('app.login', {
         url: '/login',
         views: {
           'menuContent': {
             templateUrl: 'templates/login.html',
             controller: 'LoginCtrl'
+          },
+        }
+      })
+      .state('app.location', {
+        url: '/location',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/location.html',
+            controller: 'LocationCtrl'
           },
         }
       })
@@ -125,7 +152,63 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
         }
       })
        
-        .state('app.categoriesDetail', {
+        .state('app.categoriesfashion', {
+        url: '/categoriesfashion',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/categoriesfashion.html',
+            controller: 'CategoriesfashionCtrl'
+          }
+        }
+      }).state('app.categoriesfarming', {
+        url: '/categoriesfarming',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/categoriesfarming.html',
+            controller: 'CategoriesfarmingCtrl'
+          }
+        }
+      }).state('app.categoriesfurniture', {
+        url: '/categoriesfurniture',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/categoriesfurniture.html',
+            controller: 'CategoriesfurnitureCtrl'
+          }
+        }
+      }).state('app.categorieshobbies', {
+        url: '/categorieshobbies',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/categorieshobbies.html',
+            controller: 'CategorieshobbiesCtrl'
+          }
+        }
+      }).state('app.categoriesreal', {
+        url: '/categoriesreal',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/categoriesreal.html',
+            controller: 'CategoriesrealCtrl'
+          }
+        }
+      }).state('app.categoriesservices', {
+        url: '/categoriesservices',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/categoriesservices.html',
+            controller: 'CategoriesservicesCtrl'
+          }
+        }
+      }).state('app.categoriesvehicules', {
+        url: '/categoriesvehicules',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/categoriesvehicules.html',
+            controller: 'CategoriesvehiculesCtrl'
+          }
+        }
+      }).state('app.categoriesDetail', {
         url: '/categoriesDetail',
         views: {
           'menuContent': {
@@ -144,15 +227,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
         }
       }
     })
+      .state('app.setting', {
+      url: '/setting',
+      views: {
+        'menuContent' :{
+          templateUrl: 'templates/setting.html',
+          controller: 'SettingCtrl'
+        }
+      }
+    })
       .state('app.message', {
         url: '/message',
         views: {
           'menuContent' :{
             templateUrl: 'templates/message.html',
-            controller: 'AboutCtrl'
+            controller: 'MessageCtrl'
           }
         }
-      })
+      });
 
 
 

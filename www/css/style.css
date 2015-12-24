@@ -89,6 +89,22 @@
   padding: 10px;
   margin-top: -6px;
 }
+.infos{
+  background-color: blueviolet;
+  border-width: 0px;
+  margin: 0px;
+  padding: 2px;
+}
+.message{
+  background-color: #595959;
+  border-width: 0px;
+  margin: 0px;
+  padding: 2px;
+}
+.infos p{
+  color: #ff4f0f;
+  margin-left: 30px;
+}
 .detail .col{
   color: #ff4f0f;
   text-align: center;
@@ -103,9 +119,6 @@
 }
 .coul {
    color: #950B02;
-}
-.tcol{
-  color: white;
 }
 .alignement{
   margin-left: 10px;
@@ -198,4 +211,53 @@
   margin-top: 0px;
   color: #950B02;
   text-align: right;
+}
+.subtabs{
+  background-color: #ff4f0f;
+}
+.subtabs .tab-item{
+  color:white ;
+}
+.photo{
+  background-image: url('../img/photo.png');
+}
+.one{
+  width: 25px;
+  height: 20px;
+}
+.two{
+  width: 25px;
+  height: 20px;
+}
+.three{
+  width: 25px;
+  height: 20px;
+}
+.addchoice a{
+  text-decoration: none;
+}
+.addchoice .item{
+  border-bottom: 1px solid #d1d3d6;
+}
+.photoadd{
+  height: 300px;
+}
+.photoadd .content{
+  bottom: 90px;
+}
+.favorite{
+  background: url('../img/img_no_favorite.png') center;
+  background-size: 100%;
+  background-repeat: repeat-x;
+}
+.user{
+  width: 50px;
+  border-left: 1px solid #040404;
+  padding-left: 20px;
+}
+.note{
+  width: 300px;
+}
+.note p{
+  font-size: 1.3em;
 }

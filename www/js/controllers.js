@@ -61,6 +61,10 @@ angular.module('starter.controllers', [])
     .controller('AddCtrl', function($scope) {
 
     })
+    .controller('myAdsCtrl', function($scope) {
+
+    })
+
     .controller('LoginCtrl', function($scope) {
 
     })
@@ -72,6 +76,10 @@ angular.module('starter.controllers', [])
     })
 
     .controller('SignUpCtrl', function($scope) {
+
+    })
+
+    .controller('filterCtrl', function($scope) {
 
     })
 
@@ -98,7 +106,7 @@ angular.module('starter.controllers', [])
       ]
 
       $scope.selectedItemDetail=function(){
-      
+
       $scope.selectedDetail=[ {cat:"img/berangerphotos/img.jpg", id: 1}];
       }
 

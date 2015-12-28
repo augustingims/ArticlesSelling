@@ -118,6 +118,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
             templateUrl: 'templates/fashion.html'
           }
         }
+      }).state('app.listpays', {
+        url: '/listpays',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/listpays.html'
+          }
+        }
+      }).state('app.listville', {
+        url: '/listville',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/listville.html',
+            controller: 'ListCtrl'
+          }
+        }
       }) .state('app.hobbies', {
         url: '/hobbies',
         views: {

@@ -112,6 +112,10 @@ angular.module('starter.controllers', [])
 
     })
 
+    .controller('ListCtrl', function($scope) {
+      $scope.cities = [{name:"Ebolowa SUD"},{name:"Ambam SUD"},{name:"Yaounde CENTRE"},{name:"Douala LIT"},{name:"Maroua EXT"},{name:"Batouri EST"},]
+
+    })
     .controller('CategoriesfarmingCtrl', function($scope) {
 
   })

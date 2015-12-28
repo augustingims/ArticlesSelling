@@ -42,6 +42,8 @@ angular.module('services', ['ngResource'])
             var r = results[1];
             var a, types;
             var parts = [];
+            var city = "";
+            var countri = "";
             var foundLocality = false;
             var foundState = false;
             for(var i = 0; i < r.address_components.length; i++) {
@@ -50,10 +52,14 @@ angular.module('services', ['ngResource'])
               for(var j = 0; j < types.length; j++) {
                 if(!foundLocality && types[j] == 'locality') {
                   foundLocality = true;
+                  city = a.long_name;
+                  console.log('city', city);
                   parts.push(a.long_name);
-                } else if(!foundState && types[j] == 'administrative_area_level_1') {
+                } else if(!foundState && types[j] == 'country') {
                   foundState = true;
-                  parts.push(a.short_name);
+                  countri = a.long_name;
+                  console.log('country', countri);
+                  parts.push(a.long_name);
                 }
               }
             }

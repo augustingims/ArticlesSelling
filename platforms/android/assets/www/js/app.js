@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'services','ksSwiper'])
 
   .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -38,14 +38,102 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
         }
       }
     })
-    .state('app.login', {
-      url: '/login',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/login.html'
+      .state('app.login', {
+        url: '/login',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/login.html',
+            controller: 'LoginCtrl'
+          },
         }
-      }
-    })
+      })
+
+      .state('app.signUp', {
+        url: '/login/:signUp',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/signUp.html',
+            controller: 'SignUpCtrl'
+          },
+        }
+      })
+      .state('app.technology', {
+        url: '/technology',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/technology.html'
+          }
+        }
+      }) .state('app.fashion', {
+        url: '/fashion',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/fashion.html'
+          }
+        }
+      }) .state('app.hobbies', {
+        url: '/hobbies',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/hobbies.html'
+          }
+        }
+      }) .state('app.real', {
+        url: '/real',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/real.html'
+          }
+        }
+      }) .state('app.furniture', {
+        url: '/furniture',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/furniture.html'
+          }
+        }
+      }) .state('app.farming', {
+        url: '/farming',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/farming.html'
+          }
+        }
+      }) .state('app.services', {
+        url: '/services',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/services.html'
+          }
+        }
+      }) .state('app.vehicules', {
+        url: '/vehicules',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/vehicules.html'
+          }
+        }
+      })
+
+      .state('app.categories', {
+        url: '/categories',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/categories.html',
+            controller: 'CategoriesCtrl'
+          }
+        }
+      })
+       
+        .state('app.categoriesDetail', {
+        url: '/categoriesDetail',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/categoriesDetail.html',
+            controller: 'CategoriesCtrl'
+          }
+        }
+      })
 
     .state('app.about', {
       url: '/about',
@@ -55,7 +143,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
           controller: 'AboutCtrl'
         }
       }
-    });
+    })
+      .state('app.message', {
+        url: '/message',
+        views: {
+          'menuContent' :{
+            templateUrl: 'templates/message.html',
+            controller: 'AboutCtrl'
+          }
+        }
+      })
+
+
 
     $urlRouterProvider.otherwise('/app/home');
   });

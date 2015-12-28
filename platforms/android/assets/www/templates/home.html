@@ -1,98 +1,64 @@
 <ion-view view-title="SellYourArticle">
   <ion-content>
-    <div class="list card">
+    <div class="list locate">
       <div class="item item-button-right">
         My location
         <p>{{currentLocationString}}</p>
-        <button class="button button-small button-stable ink">
+        <button class="button button-small button-stable">
           Change
         </button>
       </div>
     </div>
-    <div class="card">
-      <h4 class="title">Lastest Article</h4>
-       <ion-scroll direction="x">
-        <div class="slidebox">
-         <div class="box">
-           <img src="../img/slide/MaxPNG.png">
-           </div>
-           <div class="box">
-           <img src="../img/slide/thinkcentreaio.jpg">
-             </div>
-             <div class="box">
-           <img src="../img/slide/Toshiba_Laptop.jpg">
-         </div>
-          <div class="box">
-            <img src="../img/slide/MaxPNG.png">
-          </div>
-          <div class="box">
-            <img src="../img/slide/thinkcentreaio.jpg">
-          </div>
-          <div class="box">
-            <img src="../img/slide/Toshiba_Laptop.jpg">
-          </div>
-          <div class="box">
-            <img src="../img/slide/MaxPNG.png">
-          </div>
-          <div class="box">
-            <img src="../img/slide/thinkcentreaio.jpg">
-          </div>
-          <div class="box">
-            <img src="../img/slide/Toshiba_Laptop.jpg">
-          </div>
-       </div>
-      </ion-scroll>
+    <div class="btnAd">
+      <button class="button button-block button-energized-900 icon-left ion-compose">
+        Submit Ad
+      </button>
     </div>
-    <div class="card">
-      <div class="row custom2">
-      <div class="item">
-        <img src="../img/ic_phone.png">
-        <p>Phone</p>
-      </div>
-      <div class="item">
-        <img src="../img/ic_print.png">
-        <p>Print</p>
-      </div>
-      <div class="item">
-        <img src="../img/ic_photo.png">
-        <p>Appareil<br> photo</p>
-      </div>
-    </div>
-      <div class="row custom">
-        <div class="item ">
-          <img src="../img/ic_desktop.png">
-          <p>Desktop</p>
-        </div>
-        <div class="item">
-          <img src="../img/ic_computer.png">
-          <p>Laptop</p>
-        </div>
-        <div class="item">
-          <img src="../img/ic_tablet.png">
-          <p>Tablet</p>
-        </div>
-      </div>
-      <div class="row custom1">
-        <div class="item  ">
-          <img src="../img/ic_tv.png">
-          <p>TV</p>
-        </div>
-        <div class="item">
-          <img src="../img/ic_motorcycle.png">
-          <p>MotoCycle</p>
-        </div>
-        <div class="item">
-          <img src="../img/ic_drive.png">
-          <p>Drive</p>
-        </div>
-      </div>
-      <div class="row custom3">
-        <div class="item ">
-          <img src="../img/ic_watch.png">
-          <p>Watch</p>
-        </div>
-        <div class="item"></div>
-        <div class="item"></div>
+      <div class="item-divider last">Lastest Article</div>
+    <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="3" space-between="5" pagination-clickable="false" override-parameters="{effect: 'coverflow',coverflow: {rotate: 50,stretch: 0,depth: 100,modifier: 1,slideShadows : false}}"  on-ready="onReadySwiper(swiper)">
+      <ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6,7,8]">
+        <img ng-src="img/puppy-{{s}}.jpg" width="100%">
+      </ks-swiper-slide>
+    </ks-swiper-container>
+    <!-- <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="4" space-between="0" pagination-clickable="false"  on-ready="onReadySwiper(swiper)">
+			<ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6,7,8]">
+				<img ng-src="img/puppy-{{s}}.jpg" width="100%">
+			</ks-swiper-slide>
+		</ks-swiper-container>	-->
+    <div class="list selectcat">
+      <div class="item item-divider">Categories</div>
+      <a class="item item-icon-left" href="#/app/categories">
+        <i class="icon icon1 ion-android-desktop"></i>
+        Technology - Electronics
+      </a>
+      <a class="item item-icon-left"  href="#/app/fashion">
+        <i class="icon icon2 ion-tshirt"></i>
+        Fashion -
+      </a>
+      <a class="item item-icon-left"  href="#/app/furniture">
+        <i class="icon icon3"></i>
+        Home - Furniture - Garden
+      </a>
+      <a class="item item-icon-left"  href="#/app/hobbies">
+        <i class="icon icon4 ion-android-bicycle"></i>
+        Hobbies - Art - Sports
+      </a>
+      <a class="item item-icon-left"  href="#/app/farming">
+        <i class="icon icon5 ion-android-bus"></i>
+        Farming - Animals
+      </a>
+      <a class="item item-icon-left"  href="#/app/vehicules">
+        <i class="icon icon6 ion-model-s"></i>
+        Vehicules
+      </a>
+      <a class="item item-icon-left"  href="#/app/real">
+        <i class="icon icon7 ion-android-home"></i>
+        Real Estate
+      </a>
+      <a class="item item-icon-left"  href="#/app/services">
+        <i class="icon icon8 ion-briefcase"></i>
+        Jobs and Services
+      </a>
     </div>
   </ion-content>
 </ion-view>

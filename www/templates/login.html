@@ -1,28 +1,35 @@
 <ion-view view-title="Login" align-title="left">
-  <ion-content class="log">
-    <div class="hero">
-      <div class="content">
-        <div class="app-icon"></div>
-        <div class="app-title"><h1>Sign in</h1></div>
+  <ion-content style="background-color: #e4e5e7">
+    <div class="card">
+      <div class="card">
+        <ion-nav-buttons >
+        </ion-nav-buttons>
+        <div class="button-positive social-login">
+          <button class="button button-full button-bar-positive ion-social-facebook">
+            log in with Facebook
+          </button>
+        </div>
       </div>
     </div>
-    <div class="list">
-      <div class="padding">
-      <label class="item item-input item-md-label" type="text" hightlight-color="balanced" placelholder="Username">
-        <input class="input" type="text">
-        <span class="input-label">Username</span>
-        <div class="highlight highlight-calm"></div>
-      </label>
-      <label class="item item-input item-md-label" type="password" hightlight-color="balanced" placelholder="Password">
-        <input class="input" type="password">
-        <span class="input-label">Password</span>
-        <div class="highlight highlight-calm"></div>
-      </label>
-        </div>
+    <div class="inline"></div>
+    <div class="card">
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">User/E-mail</span>
+          <input type="text" placeholder="User/E-mail">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Password</span>
+          <input type="text" placeholder="Password">
+        </label>
+      </div>
+      <button class="button button-block button-bar-assertive">Login</button>
+      <header style="text-align: center;  color: #4d4d4d">Forgot your password?</header>
     </div>
-    <div class="padding">
-      <button  class="button button-full button-calm">Login</button>
+    <div class="item item-divider">
+      <div>Need an account? <a class="signUp" ui-sref="app.signUp">Sign up</a></div>
     </div>
+
   </ion-content>
 </ion-view>
 

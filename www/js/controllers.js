@@ -1,7 +1,10 @@
+
 angular.module('starter.controllers', [])
 
-  .controller('starter', function($scope, ionicMaterialInk, ionicMaterialMotion, $ionicSideMenuDelegate, $timeout) {
 
+  .controller('starter', function($scope, ionicMaterialInk, ionicMaterialMotion, $ionicSideMenuDelegate, $timeout) {
+     $scope.maList =[];
+     $scope.selectedItemId="";
     $timeout(function(){
       ionicMaterialInk.displayEffect();
       ionicMaterialMotion.ripple();
@@ -55,18 +58,40 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('LoginCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk) {
-    $scope.$parent.clearFabs();
-    $timeout(function() {
-      $scope.$parent.hideHeader();
-    }, 0);
-    ionicMaterialInk.displayEffect();
-  })
+    .controller('AddCtrl', function($scope) {
 
+    })
+    .controller('myAdsCtrl', function($scope) {
+
+    })
+
+    .controller('LoginCtrl', function($scope) {
+
+    })
+    .controller('SettingCtrl', function($scope) {
+
+    })
+    .controller('LocationCtrl', function($scope) {
+
+    })
+
+    .controller('SignUpCtrl', function($scope) {
+
+    })
+
+    .controller('filterCtrl', function($scope) {
+
+    })
 
     .controller('CategoriesCtrl', function($scope) {
 
-      $scope.text = 'toto';
+      $scope.text = 'asus  i3';
+
+      $scope.slideImg=[{img:"../img/berangerphotos/img1.jpg"},
+                       {img:"../img/slide/MaxPNG.png"},
+                       {img:"../img/slide/thinkcentreaio.jpg"},
+                       {img:"../img/berangerphotos/img3.jpg"}
+                      ];
 
       $scope.image = [{
         src: 'img/berangerphotos/img1.jpg',
@@ -80,12 +105,44 @@ angular.module('starter.controllers', [])
         {cat:'Garoua', id: 5},
       ]
 
+      $scope.selectedItemDetail=function(){
+
+      $scope.selectedDetail=[ {cat:"img/berangerphotos/img.jpg", id: 1}];
+      }
+
     })
 
     .controller('ListCtrl', function($scope) {
       $scope.cities = [{name:"Ebolowa SUD"},{name:"Ambam SUD"},{name:"Yaounde CENTRE"},{name:"Douala LIT"},{name:"Maroua EXT"},{name:"Batouri EST"},]
 
     })
+    .controller('CategoriesfarmingCtrl', function($scope) {
+
+  })
+    .controller('CategoriesfashionCtrl', function($scope) {
+
+  })
+    .controller('CategoriesfurnitureCtrl', function($scope) {
+
+  })
+    .controller('CategorieshobbiesCtrl', function($scope) {
+
+  })
+    .controller('CategoriesrealCtrl', function($scope) {
+
+  })
+    .controller('CategoriesservicesCtrl', function($scope) {
+
+  })
+    .controller('CategoriesvehiculesCtrl', function($scope) {
+
+  })
+    .controller('FavoriteCtrl', function($scope) {
+
+  })
+    .controller('MessageCtrl', function($scope) {
+
+  })
     .controller('AboutCtrl', function($scope) {
 
   });

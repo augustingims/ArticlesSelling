@@ -1,58 +1,13 @@
 <ion-view view-title="Select your country">
    <ion-content>
-
-       <div class="item item-divider">
+       <div class="card cardcountry">
+           <div class="list listcountry" ng-repeat="pays in listpays">
+               <a href="#/app/listville/{{pays.namePays}}">
+               <div class="item">
+                   {{pays.namePays}}
+               </div>
+               </a>
+           </div>
        </div>
-       <a class="item" href="/#/app/listville">
-           Argentine
-       </a>
-
-
-       <a class="item" href="#">
-          Bangladesh
-       </a>
-
-
-           <a class="item" href="#">
-           Bolivia
-       </a>
-
-
-
-       <a class="item" href="#">
-           Bonia and Herzegovina
-       </a>
-
-
-
-       <a class="item" href="#">
-           Brazil
-       </a>
-
-
-       <a class="item" href="#">
-           Cameroon
-       </a>
-
-       <a class="item" href="#">
-           Chile
-       </a>
-
-
-
-       <a class="item" href="#">
-           Colombia
-       </a>
-
-
-       <a class="item" href="#">
-           Costa Rica
-       </a>
-
-       <a class="item" href="#">
-           Ecuador
-       </a>
-
    </ion-content>
-
 </ion-view>

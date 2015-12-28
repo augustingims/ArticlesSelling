@@ -122,15 +122,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
         url: '/listpays',
         views: {
           'menuContent': {
-            templateUrl: 'templates/listpays.html'
+            templateUrl: 'templates/listpays.html',
+            controller: 'ListPaysCtrl'
           }
         }
       }).state('app.listville', {
-        url: '/listville',
+        url: '/listville/:id',
         views: {
           'menuContent': {
             templateUrl: 'templates/listville.html',
-            controller: 'ListCtrl'
+            controller: 'ListVilleCtrl'
           }
         }
       }) .state('app.hobbies', {

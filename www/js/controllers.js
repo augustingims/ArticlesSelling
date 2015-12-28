@@ -112,9 +112,28 @@ angular.module('starter.controllers', [])
 
     })
 
-    .controller('ListCtrl', function($scope) {
-      $scope.cities = [{name:"Ebolowa SUD"},{name:"Ambam SUD"},{name:"Yaounde CENTRE"},{name:"Douala LIT"},{name:"Maroua EXT"},{name:"Batouri EST"},]
+    .controller('ListVilleCtrl', function($scope,$http,$stateParams) {
+      $scope.listville = [];
+      $scope.load = function() {
+        $http.get('http://127.0.0.1:8080/api/listvillesforcountry/'+ $stateParams.id).success(function(response){
+          $scope.listville = response;
+        }).error(function(reason){
+          console.log(reason);
+        });
+      };
+      $scope.load();
 
+    })
+    .controller('ListPaysCtrl', function($scope,$http) {
+         $scope.listpays = [];
+         $scope.loadAll = function(){
+           $http.get('http://127.0.0.1:8080/api/pays/findAll').success(function(response){
+             $scope.listpays = response;
+           }).error(function(reason){
+             console.log(reason);
+           })
+         };
+      $scope.loadAll();
     })
     .controller('CategoriesfarmingCtrl', function($scope) {
 

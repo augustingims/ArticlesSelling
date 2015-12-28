@@ -124,8 +124,9 @@
   margin-left: 10px;
 }
 .ville .list {
-  border-bottom: 1px solid #888888;
-}.ville {
+  border-bottom: 1px solid #e1e1e8;
+}
+.ville {
   margin-bottom: 0px;
 }
 .post{
@@ -316,4 +317,15 @@
 }
 .note p{
   font-size: 1.3em;
+}
+.listcountry a{
+  text-decoration: none;
+}
+.listcountry {
+  margin-bottom: 0px;
+}.listville {
+  margin-bottom: 0px;
+}
+.cardcountry .list .item{
+  border-bottom: 1px solid #e1e1e8;
 }

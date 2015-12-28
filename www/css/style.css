@@ -68,5 +68,10 @@
 .alignement{
   margin-left: 10px;
 }
+.ville .list {
+  border-bottom: 1px solid #888888;
+}.ville {
+  margin-bottom: 0px;
+}
 
 

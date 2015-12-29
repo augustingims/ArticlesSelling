@@ -87,10 +87,10 @@ angular.module('starter.controllers', [])
 
       $scope.text = 'asus  i3';
 
-      $scope.slideImg=[{img:"../img/berangerphotos/img1.jpg"},
-                       {img:"../img/slide/MaxPNG.png"},
-                       {img:"../img/slide/thinkcentreaio.jpg"},
-                       {img:"../img/berangerphotos/img3.jpg"}
+      $scope.slideImg=[{img:"img/berangerphotos/img1.jpg"},
+                       {img:"img/slide/MaxPNG.png"},
+                       {img:"img/slide/thinkcentreaio.jpg"},
+                       {img:"img/berangerphotos/img3.jpg"}
                       ];
 
       $scope.image = [{

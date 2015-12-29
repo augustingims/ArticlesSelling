@@ -1,0 +1,17 @@
+ <ion-view view-title="Select your city">
+    <ion-content>
+        <div class="card">
+            <label class="item item-input">
+                <input type="text" ng-model="search" placeholder="FIND YOUR CITY">
+            </label>
+        </div>
+        <div class="card ville">
+
+        <div class="list listville" ng-repeat="city in listville | filter:search">
+            <a href="#" class="item">
+                {{city.nameVille}}
+            </a>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>

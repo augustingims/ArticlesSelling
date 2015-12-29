@@ -38,7 +38,6 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-plugin-console": "1.0.2",
     "cordova-plugin-device": "1.1.0",
     "cordova-plugin-geolocation": "1.0.1",
     "cordova-plugin-splashscreen": "3.0.0",

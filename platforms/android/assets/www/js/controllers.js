@@ -14,7 +14,7 @@ angular.module('starter.controllers', [])
       $ionicSideMenuDelegate.toggleLeft();
     };
   })
-  .controller('mainhome', function($scope, $http,$timeout,$ionicPlatform,$rootScope,Weather,Geo) {
+  .controller('mainhome', function($scope, $http,$timeout,$ionicPlatform,$rootScope,Weather,Geo,$stateParams) {
     var _this = this;
 
       $scope.swiper = {};
@@ -30,6 +30,9 @@ angular.module('starter.controllers', [])
         });
       };
 
+      window.localStorage.setItem("city", $stateParams.id);
+      console.log(localStorage.getItem("city"));
+
     this.getCurrent = function(lat, lng, locString) {
       Weather.getAtLocation(lat, lng).then(function(resp) {
         $scope.current = resp.data;
@@ -44,7 +47,6 @@ angular.module('starter.controllers', [])
       Geo.getLocation().then(function(position) {
         var lat = position.coords.latitude;
         var lng = position.coords.longitude;
-
         Geo.reverseGeocode(lat, lng).then(function(locString) {
           $scope.currentLocationString = locString;
         });
@@ -114,7 +116,10 @@ angular.module('starter.controllers', [])
 
     .controller('ListVilleCtrl', function($scope,$http,$stateParams) {
       $scope.listville = [];
+      window.localStorage.setItem("country", $stateParams.id);
+
       $scope.load = function() {
+        console.log(localStorage.getItem("country"));
         $http.get('http://127.0.0.1:8080/api/listvillesforcountry/'+ $stateParams.id).success(function(response){
           $scope.listville = response;
         }).error(function(reason){

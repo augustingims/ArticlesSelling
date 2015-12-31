@@ -4,9 +4,9 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'services','ksSwiper'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'services','ksSwiper','ngStorage'])
 
-  .run(function($ionicPlatform) {
+  .run(function($ionicPlatform,$state) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -19,8 +19,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    if(window.localStorage.getItem("country")!= null && window.localStorage.getItem("city")!=null){
+       $state.go("app.home");
+    }else{
+      $state.go("app.listpays")
+    }
   });
-})
+    })
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -40,7 +45,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
       }
     })
     .state('app.home', {
-      url: '/home',
+      url: '/home/:id',
       views: {
         'menuContent': {
           templateUrl: 'templates/home.html',
@@ -63,7 +68,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
           'menuContent': {
             templateUrl: 'templates/favorite.html',
             controller: 'FavoriteCtrl'
-          },
+          }
         }
       })
     .state('app.myAds', {
@@ -82,7 +87,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
           'menuContent': {
             templateUrl: 'templates/login.html',
             controller: 'LoginCtrl'
-          },
+          }
         }
       })
       .state('app.location', {
@@ -91,7 +96,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
           'menuContent': {
             templateUrl: 'templates/location.html',
             controller: 'LocationCtrl'
-          },
+          }
         }
       })
 
@@ -101,7 +106,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
           'menuContent': {
             templateUrl: 'templates/signUp.html',
             controller: 'SignUpCtrl'
-          },
+          }
         }
       })
       .state('app.technology', {

@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/wabo/Formation/ProjetFormation/Ionic/ArticlesSelling/platforms/android/CordovaLib/assets"/></dataSet><dataSet config="debug"><source path="/home/wabo/Formation/ProjetFormation/Ionic/ArticlesSelling/platforms/android/CordovaLib/src/debug/assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/home/gims/Bureau/projetIonic/ArticlesSelling/platforms/android/CordovaLib/assets"/></dataSet><dataSet config="debug"><source path="/home/gims/Bureau/projetIonic/ArticlesSelling/platforms/android/CordovaLib/src/debug/assets"/></dataSet></merger>

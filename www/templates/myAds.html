@@ -1,38 +1,108 @@
 <ion-view view-title = "My Ads">
-    <!--<div class="list row row-center dim-btn bar bar-subheader" >
-                <div class="col col-70 color" >
+    
+    <ion-content>
+        
+        
+    <!--<ion-side-menus>
+       
+      <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-balanced nav-title-slide-ios7">
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" ng-click="openMenu()"></button>
+        </ion-nav-buttons>  
+        </ion-nav-bar>
+        <ion-nav-view></ion-nav-view>
+      </ion-pane>
+ 
+      <ion-side-menu side="left">
+        <ion-header-bar class="bar bar-header bar-dark">
+          <h1 class="title">Filter Movies</h1>
+        </ion-header-bar>
+         
+        <ion-content has-header="true">
+           
+          <div class="list">
+           
+            <ion-radio ng-model="selected.score" ng-value="{{sort.score}}"  ng-repeat="sort in sorting">{{sort.name}}</ion-radio>
+           
+          </div>
+           
+        </ion-content>
+      </ion-side-menu>
+       
+    </ion-side-menus>-->
+        
+        <div class="center wow animated">
+            
+            <!--<div class="list row row-center dim-btn">
+                <div class="col col-70 color animated fadeInLeft" >
                     <h6>
                         <span class="crop">22 results in Douala</span>
                     </h6>
                 </div>
-                <div class="col color">
-                    <a href="#/app/filter">
-                      <button class="button button-positive  button-small">
-                          Filers
-                      </button>
-                    </a>   
+                <div ng-controller = "SideCtrl" class="col color animated fadeInRight" style="background-color: black; height:100px;">
+                    <ion-side-menus enable-menu-with-back-views="false">
+                        <ion-side-menu-content>
+                    <button class="button button-positive  button-small"  ng-click="openMenu()">
+                                  Filers
+                            </button>
+                            <ion-nav-view name="menuContent"></ion-nav-view>
+                        </ion-side-menu-content>
+                        <ion-side-menu side="right">
+                          <ion-header-bar class="expanded">
+                            <img src="img/logo.png" class="avatar motion spin fade">
+                            <div class="menu-bottom welcome">
+                                Welcome
+                            </div>
+                        </ion-header-bar>
+                         <ion-content class="has-header headmenu">
+                          <ion-list>
+                            <ion-item nav-clear menu-close href="#/app/home">
+                              <i class="ion ion-android-home"></i>  Home
+                            </ion-item>
+                            <ion-item nav-clear menu-close href="#/app/myAds">
+                               <i class="ion ion-android-folder-open "></i>  My Ads
+                            </ion-item>
+                              <ion-item nav-clear menu-close href="#/app/add">
+                             <i class="ion ion-compose"></i>  Submit Ad
+                            </ion-item>
+                            <ion-item nav-clear menu-close href="#/app/message">
+                               <i class="ion ion-android-mail "></i>  message
+                            </ion-item>
+                            <ion-item class="line"nav-clear menu-close href="#/app/favorite">
+                              <i class="ion ion-android-favorite "></i>  favorite
+                            </ion-item>
+                            <ion-item nav-clear menu-close href="#/app/setting">
+                              <i class="ion ion-android-settings"></i>  Setting
+                            </ion-item>
+                            <ion-item nav-clear menu-close href="#/app/login">
+                              <i class="ion ion-log-in"></i>  login
+                            </ion-item>
+                            <ion-item nav-clear menu-close href="#/app/listpays"> pays
+                            </ion-item>
+                          </ion-list>
+                        </ion-content>
+                        </ion-side-menu>
+                    </ion-side-menus>
                 </div>
             </div>-->
-    <ion-content>
-        <div class="center wow animated">
-            <div class="list row row-center dim-btn fadeInRight">
-                <div class="col col-70 color" >
+            
+            <div class="list row row-center dim-btn">
+                <div class="col col-70 color animated fadeInLeft" >
                     <h6>
                         <span class="crop">22 results in Douala</span>
                     </h6>
                 </div>
-                <div class="col color">
-                    <a href="#/app/filter">
-                        <button class="button button-positive  button-small">
-                              Filers
-                        </button>
-                    </a>   
+                <div class="col color animated fadeInRight">
+                    <button class="button button-positive  button-small" ui-sref="app.filter">
+                                  Filers
+                            </button>
                 </div>
             </div>
            <!-- <div class="list animate-fade-slide-in-right">-->
           <div class="list card animated fadeInDown">
             <a class="item item-thumbnail-left" href="#">
-                    <img src="img/berangerphotos/img1.jpg">
+                    <img src="img/berangerphotos/img1.jpg" class="animated rotateInDownLeft">
                     <div class="row row-center item-left">
                         <div class="col">
                             <h2>
@@ -59,7 +129,7 @@
         </div>
         <div class="list card animated fadeInUp">
             <a class="item item-thumbnail-left" href="#">
-                    <img src="img/berangerphotos/img2.jpg">
+                    <img src="img/berangerphotos/img2.jpg" class="animated rotateInDownLeft">
                     <div class="row row-center item-left">
                         <div class="col">
                             <h2>
@@ -86,7 +156,7 @@
         </div>
         <div class="list card animated fadeInDown">
             <a class="item item-thumbnail-left" href="#">
-                    <img src="img/berangerphotos/img3.jpg">
+                    <img src="img/berangerphotos/img3.jpg" class="animated rotateInDownLeft">
                     <div class="row row-center item-left">
                         <div class="col">
                             <h2>
@@ -113,7 +183,7 @@
         </div>
         <div class="list card animated fadeInUp">
             <a class="item item-thumbnail-left" href="#">
-                    <img src="img/berangerphotos/img4.jpg">
+                    <img src="img/berangerphotos/img4.jpg" class="animated rotateInDownLeft">
                     <div class="row row-center item-left">
                         <div class="col">
                             <h2>
@@ -140,7 +210,7 @@
         </div>
         <div class="list card animated fadeInDown">
             <a class="item item-thumbnail-left" href="#">
-                    <img src="img/berangerphotos/img5.jpg">
+                    <img src="img/berangerphotos/img5.jpg" class="animated rotateInDownLeft">
                     <div class="row row-center item-left">
                         <div class="col">
                             <h2>
@@ -167,7 +237,7 @@
         </div>
         <div class="list card animated fadeInUp">
             <a class="item item-thumbnail-left" href="#">
-                    <img src="img/berangerphotos/img6.jpg">
+                    <img src="img/berangerphotos/img6.jpg" class="animated rotateInDownLeft">
                     <div class="row row-center item-left">
                         <div class="col">
                             <h2>

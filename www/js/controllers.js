@@ -164,4 +164,15 @@ angular.module('starter.controllers', [])
   })
     .controller('AboutCtrl', function($scope) {
 
-  });
+  })/*
+    .controller('SideCtrl', function($scope, $ionicSideMenuDelegate, ionicMaterialInk, ionicMaterialMotion, $timeout) {
+        $scope.maList =[];
+        $scope.selectedItemId="";
+        $scope.openMenu = function() {
+            $ionicSideMenuDelegate.toggleRight();
+        };
+        $timeout(function(){
+          ionicMaterialInk.displayEffect();
+          ionicMaterialMotion.ripple();
+        },0);
+  })*/;

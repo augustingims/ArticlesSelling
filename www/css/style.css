@@ -198,13 +198,30 @@
 .nbre{
   padding:1px;
 }
-.taille-btn button{
+.taille1{
   font-size: x-small;
   height: 10px;
-  width: 100%;
+  float: left;
+  width: 80%;
+  border-radius: 100%;
   margin-left: 3px;
 }
 
+.taille2{
+  font-size: x-small;
+  height: 10px;
+  float:right;
+  width: 80%;
+  border-radius: 100%;
+  margin-right: 3px;
+}
+
+.dim-btn button{
+  font-size: x-small;
+  height: 10px;
+  float: right;
+  border-radius: 100%;
+}
 
 .card-color{
     background-color:lightgray;
@@ -250,12 +267,6 @@
     margin-left: 5px;
 }
 
-.dim-btn button{
-  font-size: x-small;
-  height: 10px;
-  float: right;
-  border-radius: 100%;
-}
 .feed-item .feed-gradient-overlay {
   position: absolute;
   background: transparent linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 18%, transparent 48%, rgba(255, 255, 255, 0) 49%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.03) 51%, rgba(0, 0, 0, 0.25) 59%, rgba(0, 0, 0, 0.67) 87%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0.87) 100%) repeat scroll 0% 0%;

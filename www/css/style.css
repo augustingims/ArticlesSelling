@@ -83,7 +83,7 @@
   color: white;
 }
 .detail{
-  background-color: darkmagenta;
+  /*background-color: darkmagenta;*/
   border-width: 0px;
   margin: 0px;
   padding: 10px;
@@ -107,8 +107,8 @@
 }
 .detail .col{
   color: #ff4f0f;
-  text-align: center;
-  padding: 3px;
+  /*text-align: center;*/
+  padding: 10px;
 }
 .log {
   background-image: url('../img/login1.jpg');
@@ -346,4 +346,32 @@
 
 .font{
     background-color: #FAFAbc;
+}
+
+.font-title{
+    background-color: #FAFAbc;
+    color: blue;
+    text-align: center;
+}
+
+.font-prix{
+    background-color: #FAFAbc;
+    color: orangered;
+    text-align: center;
+}
+
+.font-text{
+    background-color: gainsboro;
+}
+
+.font-text-date{
+    background-color: gainsboro;
+    /*text-align: center;*/
+    border-top-color:red;
+    border-color: red;
+}
+
+.font-desc{
+    background-color: #FAFAbc;
+    padding: 10px;
 }

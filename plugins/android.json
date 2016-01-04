@@ -7,9 +7,6 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.ecomputer318906"
-        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.ionicframework.ecomputer318906"
         },

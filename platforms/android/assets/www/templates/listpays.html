@@ -1,0 +1,13 @@
+<ion-view view-title="Select your country">
+   <ion-content>
+       <div class="card cardcountry">
+           <div class="list listcountry" ng-repeat="pays in listpays">
+               <a href="#/app/listville/{{pays.namePays}}">
+               <div class="item">
+                   {{pays.namePays}}
+               </div>
+               </a>
+           </div>
+       </div>
+   </ion-content>
+</ion-view>

@@ -58,24 +58,40 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('LoginCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk) {
-    $scope.$parent.clearFabs();
-    $timeout(function() {
-      $scope.$parent.hideHeader();
-    }, 0);
-    ionicMaterialInk.displayEffect();
-  })
+    .controller('AddCtrl', function($scope) {
 
+    })
+    .controller('myAdsCtrl', function($scope) {
+
+    })
+
+    .controller('LoginCtrl', function($scope) {
+
+    })
+    .controller('SettingCtrl', function($scope) {
+
+    })
+    .controller('LocationCtrl', function($scope) {
+
+    })
+
+    .controller('SignUpCtrl', function($scope) {
+
+    })
+
+    .controller('filterCtrl', function($scope) {
+
+    })
 
     .controller('CategoriesCtrl', function($scope) {
 
       $scope.text = 'asus  i3';
 
-      $scope.slideImg=[{img:"../img/berangerphotos/img1.jpg"},
-                       {img:"../img/slide/MaxPNG.png"},
-                       {img:"../img/slide/thinkcentreaio.jpg"},
-                       {img:"../img/berangerphotos/img3.jpg"}
-                      ]
+      $scope.slideImg=[{img:"img/berangerphotos/img1.jpg"},
+                       {img:"img/slide/MaxPNG.png"},
+                       {img:"img/slide/thinkcentreaio.jpg"},
+                       {img:"img/berangerphotos/img3.jpg"}
+                      ];
 
       $scope.image = [{
         src: 'img/berangerphotos/img1.jpg',
@@ -90,13 +106,62 @@ angular.module('starter.controllers', [])
       ]
 
       $scope.selectedItemDetail=function(){
-      
+
       $scope.selectedDetail=[ {cat:"img/berangerphotos/img.jpg", id: 1}];
       }
 
     })
 
+    .controller('ListVilleCtrl', function($scope,$http,$stateParams) {
+      $scope.listville = [];
+      $scope.load = function() {
+        $http.get('http://127.0.0.1:8080/api/listvillesforcountry/'+ $stateParams.id).success(function(response){
+          $scope.listville = response;
+        }).error(function(reason){
+          console.log(reason);
+        });
+      };
+      $scope.load();
 
+    })
+    .controller('ListPaysCtrl', function($scope,$http) {
+         $scope.listpays = [];
+         $scope.loadAll = function(){
+           $http.get('http://127.0.0.1:8080/api/pays/findAll').success(function(response){
+             $scope.listpays = response;
+           }).error(function(reason){
+             console.log(reason);
+           })
+         };
+      $scope.loadAll();
+    })
+    .controller('CategoriesfarmingCtrl', function($scope) {
+
+  })
+    .controller('CategoriesfashionCtrl', function($scope) {
+
+  })
+    .controller('CategoriesfurnitureCtrl', function($scope) {
+
+  })
+    .controller('CategorieshobbiesCtrl', function($scope) {
+
+  })
+    .controller('CategoriesrealCtrl', function($scope) {
+
+  })
+    .controller('CategoriesservicesCtrl', function($scope) {
+
+  })
+    .controller('CategoriesvehiculesCtrl', function($scope) {
+
+  })
+    .controller('FavoriteCtrl', function($scope) {
+
+  })
+    .controller('MessageCtrl', function($scope) {
+
+  })
     .controller('AboutCtrl', function($scope) {
 
   });

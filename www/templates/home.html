@@ -4,20 +4,26 @@
       <div class="item item-button-right">
         My location
         <p>{{currentLocationString}}</p>
-        <button class="button button-small button-stable">
+        <button class="button button-small button-stable" ui-sref="app.location">
           Change
         </button>
       </div>
     </div>
     <div class="btnAd">
-      <button class="button button-block button-energized-900 icon-left ion-compose">
+      <button class="button button-block button-energized-900 icon-left ion-compose" ui-sref="app.add">
         Submit Ad
       </button>
     </div>
-      <div class="item-divider">Lastest Article</div>
+      <div class="item-divider last">Lastest Article</div>
     <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="3" space-between="5" pagination-clickable="false" override-parameters="{effect: 'coverflow',coverflow: {rotate: 50,stretch: 0,depth: 100,modifier: 1,slideShadows : false}}"  on-ready="onReadySwiper(swiper)">
       <ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6,7,8]">
+        <div class="feed-item">
+          <div class="feed-media">
         <img ng-src="img/puppy-{{s}}.jpg" width="100%">
+            <div class="feed-gradient-overlay"></div>
+            <h6 class="feed-title">15 000cfa</h6>
+          </div>
+        </div>
       </ks-swiper-slide>
     </ks-swiper-container>
     <!-- <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="4" space-between="0" pagination-clickable="false"  on-ready="onReadySwiper(swiper)">
@@ -27,35 +33,35 @@
 		</ks-swiper-container>	-->
     <div class="list selectcat">
       <div class="item item-divider">Categories</div>
-      <a class="item item-icon-left" href="#/app/technology">
+      <a class="item item-icon-left" href="#/app/categories">
         <i class="icon icon1 ion-android-desktop"></i>
         Technology - Electronics
       </a>
-      <a class="item item-icon-left"  href="#/app/fashion">
+      <a class="item item-icon-left"  href="#/app/categoriesfashion">
         <i class="icon icon2 ion-tshirt"></i>
-        Fashion -
+        Fashion and Beauty
       </a>
-      <a class="item item-icon-left"  href="#/app/furniture">
-        <i class="icon icon3"></i>
+      <a class="item item-icon-left"  href="#/app/categoriesfurniture">
+        <i class="icon icon3 ion-ios-albums"></i>
         Home - Furniture - Garden
       </a>
-      <a class="item item-icon-left"  href="#/app/hobbies">
+      <a class="item item-icon-left"  href="#/app/categorieshobbies">
         <i class="icon icon4 ion-android-bicycle"></i>
         Hobbies - Art - Sports
       </a>
-      <a class="item item-icon-left"  href="#/app/farming">
+      <a class="item item-icon-left"  href="#/app/categoriesfarming">
         <i class="icon icon5 ion-android-bus"></i>
         Farming - Animals
       </a>
-      <a class="item item-icon-left"  href="#/app/vehicules">
+      <a class="item item-icon-left"  href="#/app/categoriesvehicules">
         <i class="icon icon6 ion-model-s"></i>
         Vehicules
       </a>
-      <a class="item item-icon-left"  href="#/app/real">
+      <a class="item item-icon-left"  href="#/app/categoriesreal">
         <i class="icon icon7 ion-android-home"></i>
         Real Estate
       </a>
-      <a class="item item-icon-left"  href="#/app/services">
+      <a class="item item-icon-left"  href="#/app/categoriesservices">
         <i class="icon icon8 ion-briefcase"></i>
         Jobs and Services
       </a>

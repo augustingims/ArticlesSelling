@@ -1,44 +1,40 @@
 <ion-view view-title="Name categories">
   <ion-content>
-        <div class="row taille-btn">
-          <button class="button button-outline button-positive  button-small " ui-sref="app.vehicules">
-              sub-cat
-          </button>
-          <button class="button button-outline button-positive  button-small">
-              Filter
+      <div class="row">
+        <div class="col col-70 color animated fadeInLeft" >
+          <button class="button button-positive  button-small taille1" ui-sref="app.technology">
+            sub-cat
           </button>
         </div>
-        <div class="row nbre">
-            <span>30 categories</span>
+        <div class="col animated fadeInRight" >
+          <button class="button button-positive  button-small taille2">
+            Filter
+          </button>
         </div>
-    <div class="list headline">
-    <!--<div class="row">     -->
-      <a class="item item-thumbnail-left cadre-image " href="#/app/categoriesDetail">
-      <!--<div class="col col-50"> -->
 
-        <img src="img/berangerphotos/img1.jpg"  class="dimension-image" >
+      </div>
+      <div class="row nbre">
+        <span>30 categories</span>
+      </div>
 
-      <!--</div>   -->
-      <!--<div class="alignement" id="texts" style="float: left;">   -->
-        <div class="row row-center item-left">
+      <div class="list card headline font animated fadeInDown" ng-repeat="maList in maLists" >
+        <a class="item item-thumbnail-left cadre-image " href="#/app/categoriesDetail">
+          <img src="{{maList.cat}}"  class="dimension-image animated rotateInDownLeft" >
+          <div class="row row-center item-left">
             <div class="col">
-          <h3>
-            <span>Pretty Hate Machine</span>
-          </h3>
-          <p>
-            <span>Nine Inch Nails</span>
-          </p>
-          <h2 class="couleurText post-col-text ">
-            <span style="float: left; font-size: small">Negociable</span>
-              <span style="float: right;"  class="couleur-text-prix">15.000cfa</span>
-          </h2>
-
+              <h3>
+                <span>Pretty Hate Machine</span>
+              </h3>
+              <p>
+                <span>Nine Inch Nails</span>
+              </p>
+              <h2 class="couleurText post-col-text ">
+                <span style="float: left; font-size: small">Negociable</span>
+                <span style="float: right;"  class="couleur-text-prix">15.000cfa</span>
+              </h2>
             </div>
-            </div>
-    </a>
-
-
-    </div>
-
+          </div>
+        </a>
+      </div>
   </ion-content>
 </ion-view>

@@ -88,23 +88,33 @@ angular.module('starter.controllers', [])
 
       $scope.text = 'asus  i3';
 
+
+      $scope.maLists =[
+        {cat:"img/berangerphotos/img1.jpg",id:1},
+        {cat:"img/berangerphotos/img2.jpg",id:2},
+        {cat:"img/berangerphotos/img3.jpg",id:3},
+        {cat:"img/berangerphotos/img4.jpg",id:4},
+        {cat:"img/berangerphotos/img5.jpg",id:5},
+        {cat:"img/berangerphotos/img6.jpg",id:6},
+        {cat:"img/berangerphotos/img7.jpg",id:7},
+        {cat:"img/berangerphotos/img8.jpg",id:8},
+        {cat:"img/berangerphotos/img9.jpg",id:9},
+        {cat:"img/berangerphotos/img10.jpg",id:10},
+      ] ;
+
+
       $scope.slideImg=[{img:"img/berangerphotos/img1.jpg"},
                        {img:"img/slide/MaxPNG.png"},
                        {img:"img/slide/thinkcentreaio.jpg"},
                        {img:"img/berangerphotos/img3.jpg"}
                       ];
 
+
       $scope.image = [{
         src: 'img/berangerphotos/img1.jpg',
       }];
 
-      $scope.maList =[
-        {cat:"img/berangerphotos/img.jpg", id: 1},
-        {cat:'Yaoude', id: 2},
-        {cat:'Bafoussan', id: 3},
-        {cat:'Bertoua', id: 4},
-        {cat:'Garoua', id: 5},
-      ]
+
 
       $scope.selectedItemDetail=function(){
 
@@ -161,24 +171,107 @@ angular.module('starter.controllers', [])
     })
     .controller('CategoriesfarmingCtrl', function($scope) {
 
+        $scope.maLists =[
+            {cat:"img/berangerphotos/img1.jpg",id:8},
+            {cat:"img/berangerphotos/img2.jpg",id:10},
+            {cat:"img/berangerphotos/img3.jpg",id:9},
+            {cat:"img/berangerphotos/img4.jpg",id:4},
+            {cat:"img/berangerphotos/img5.jpg",id:3},
+            {cat:"img/berangerphotos/img6.jpg",id:6},
+            {cat:"img/berangerphotos/img7.jpg",id:7},
+            {cat:"img/berangerphotos/img8.jpg",id:6},
+            {cat:"img/berangerphotos/img9.jpg",id:5},
+            {cat:"img/berangerphotos/img10.jpg",id:10},
+        ] ;
+
   })
     .controller('CategoriesfashionCtrl', function($scope) {
+        $scope.maLists =[
+            {cat:"img/berangerphotos/img1.jpg",id:9},
+            {cat:"img/berangerphotos/img2.jpg",id:2},
+            {cat:"img/berangerphotos/img3.jpg",id:7},
+            {cat:"img/berangerphotos/img4.jpg",id:10},
+            {cat:"img/berangerphotos/img5.jpg",id:5},
+            {cat:"img/berangerphotos/img6.jpg",id:6},
+            {cat:"img/berangerphotos/img7.jpg",id:7},
+            {cat:"img/berangerphotos/img8.jpg",id:8},
+            {cat:"img/berangerphotos/img9.jpg",id:3},
+            {cat:"img/berangerphotos/img10.jpg",id:4},
+        ] ;
 
   })
     .controller('CategoriesfurnitureCtrl', function($scope) {
+        $scope.maLists =[
+            {cat:"img/berangerphotos/img1.jpg",id:5},
+            {cat:"img/berangerphotos/img2.jpg",id:6},
+            {cat:"img/berangerphotos/img3.jpg",id:3},
+            {cat:"img/berangerphotos/img4.jpg",id:8},
+            {cat:"img/berangerphotos/img5.jpg",id:2},
+            {cat:"img/berangerphotos/img6.jpg",id:3},
+            {cat:"img/berangerphotos/img7.jpg",id:7},
+            {cat:"img/berangerphotos/img8.jpg",id:1},
+            {cat:"img/berangerphotos/img9.jpg",id:9},
+            {cat:"img/berangerphotos/img10.jpg",id:10},
+        ] ;
 
   })
     .controller('CategorieshobbiesCtrl', function($scope) {
+        $scope.maLists =[
+            {cat:"img/berangerphotos/img1.jpg",id:1},
+            {cat:"img/berangerphotos/img2.jpg",id:10},
+            {cat:"img/berangerphotos/img3.jpg",id:3},
+            {cat:"img/berangerphotos/img4.jpg",id:9},
+            {cat:"img/berangerphotos/img5.jpg",id:2},
+            {cat:"img/berangerphotos/img6.jpg",id:6},
+            {cat:"img/berangerphotos/img7.jpg",id:5},
+            {cat:"img/berangerphotos/img8.jpg",id:8},
+            {cat:"img/berangerphotos/img9.jpg",id:9},
+            {cat:"img/berangerphotos/img10.jpg",id:10},
+        ] ;
 
   })
     .controller('CategoriesrealCtrl', function($scope) {
+        $scope.maLists =[
+            {cat:"img/berangerphotos/img1.jpg",id:6},
+            {cat:"img/berangerphotos/img2.jpg",id:2},
+            {cat:"img/berangerphotos/img3.jpg",id:7},
+            {cat:"img/berangerphotos/img4.jpg",id:4},
+            {cat:"img/berangerphotos/img5.jpg",id:5},
+            {cat:"img/berangerphotos/img6.jpg",id:6},
+            {cat:"img/berangerphotos/img7.jpg",id:7},
+            {cat:"img/berangerphotos/img8.jpg",id:8},
+            {cat:"img/berangerphotos/img9.jpg",id:5},
+            {cat:"img/berangerphotos/img10.jpg",id:10},
+        ] ;
 
   })
     .controller('CategoriesservicesCtrl', function($scope) {
-
+        $scope.maLists =[
+            {cat:"img/berangerphotos/img1.jpg",id:1},
+            {cat:"img/berangerphotos/img2.jpg",id:9},
+            {cat:"img/berangerphotos/img3.jpg",id:3},
+            {cat:"img/berangerphotos/img4.jpg",id:7},
+            {cat:"img/berangerphotos/img5.jpg",id:5},
+            {cat:"img/berangerphotos/img6.jpg",id:6},
+            {cat:"img/berangerphotos/img7.jpg",id:7},
+            {cat:"img/berangerphotos/img8.jpg",id:2},
+            {cat:"img/berangerphotos/img9.jpg",id:9},
+            {cat:"img/berangerphotos/img10.jpg",id:10},
+        ] ;
   })
     .controller('CategoriesvehiculesCtrl', function($scope) {
-
+        $scope.maLists =[
+            {cat:"img/berangerphotos/img1.jpg",id:4},
+            {cat:"img/berangerphotos/img2.jpg",id:2},
+            {cat:"img/berangerphotos/img3.jpg",id:10},
+            {cat:"img/berangerphotos/img4.jpg",id:4},
+            {cat:"img/berangerphotos/img5.jpg",id:8},
+            {cat:"img/berangerphotos/img6.jpg",id:6},
+            {cat:"img/berangerphotos/img7.jpg",id:7},
+            {cat:"img/berangerphotos/img8.jpg",id:8},
+            {cat:"img/berangerphotos/img9.jpg",id:9},
+            {cat:"img/berangerphotos/img10.jpg",id:10},
+        ] ;
   })
     .controller('FavoriteCtrl', function($scope) {
 
@@ -188,4 +281,15 @@ angular.module('starter.controllers', [])
   })
     .controller('AboutCtrl', function($scope) {
 
-  });
+  })/*
+    .controller('SideCtrl', function($scope, $ionicSideMenuDelegate, ionicMaterialInk, ionicMaterialMotion, $timeout) {
+        $scope.maList =[];
+        $scope.selectedItemId="";
+        $scope.openMenu = function() {
+            $ionicSideMenuDelegate.toggleRight();
+        };
+        $timeout(function(){
+          ionicMaterialInk.displayEffect();
+          ionicMaterialMotion.ripple();
+        },0);
+  })*/;

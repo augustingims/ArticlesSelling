@@ -55,8 +55,7 @@ angular.module('starter.controllers', [])
         alert('Unable to get current location: ' + error);
       });
     };
-
-    $scope.refreshData();
+      $scope.refreshData();
 
   })
 
@@ -114,14 +113,24 @@ angular.module('starter.controllers', [])
 
     })
 
-    .controller('ListVilleCtrl', function($scope,$http,$stateParams) {
+    .controller('ListVilleCtrl', function($scope,$http,$stateParams,$ionicLoading) {
       $scope.listville = [];
       window.localStorage.setItem("country", $stateParams.id);
+      $scope.show = function() {
+        $ionicLoading.show({
+          template: '<ion-spinner ion="android"></ion-spinner>'
+        });
+      };
+      $scope.hide = function(){
+        $ionicLoading.hide();
+      };
 
       $scope.load = function() {
         console.log(localStorage.getItem("country"));
+        $scope.show($ionicLoading);
         $http.get('http://127.0.0.1:8080/api/listvillesforcountry/'+ $stateParams.id).success(function(response){
           $scope.listville = response;
+          $scope.hide($ionicLoading);
         }).error(function(reason){
           console.log(reason);
         });
@@ -129,10 +138,20 @@ angular.module('starter.controllers', [])
       $scope.load();
 
     })
-    .controller('ListPaysCtrl', function($scope,$http) {
-         $scope.listpays = [];
+    .controller('ListPaysCtrl', function($scope,$http,$ionicLoading) {
+      $scope.listpays = [];
+      $scope.show = function() {
+        $ionicLoading.show({
+          template: '<ion-spinner ion="android"></ion-spinner>'
+        });
+      };
+      $scope.hide = function(){
+        $ionicLoading.hide();
+      };
          $scope.loadAll = function(){
+           $scope.show($ionicLoading);
            $http.get('http://127.0.0.1:8080/api/pays/findAll').success(function(response){
+             $scope.hide($ionicLoading);
              $scope.listpays = response;
            }).error(function(reason){
              console.log(reason);

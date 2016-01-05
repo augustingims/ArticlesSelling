@@ -1,10 +1,18 @@
+<ion-side-menu-content drag-content="false">
+    <ion-nav-bar class="bar-balanced">
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-arrow-left-c"></i>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+</ion-side-menu-content>
 <ion-view view-title="Select your city">
     <ion-nav-buttons side="left"></ion-nav-buttons>
     <ion-nav-buttons side="right"></ion-nav-buttons>
     <ion-content>
         <div class="card">
             <label class="item item-input">
-                <input type="text" ng-model="search" placeholder="FIND YOUR CITY">
+                <input type="text" ng-model="search" placeholder="Find your city">
             </label>
         </div>
         <div class="card ville">

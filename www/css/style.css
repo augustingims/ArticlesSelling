@@ -86,7 +86,7 @@
   /*background-color: darkmagenta;*/
   border-width: 0px;
   margin: 0px;
-  padding: 10px;
+  padding: 0px;
   margin-top: -6px;
 }
 .infos{
@@ -107,6 +107,10 @@
 }
 .detail .col{
   color: #ff4f0f;
+    margin-top: -4px;
+    margin-right: -4px;
+    margin-bottom: -4px;
+    margin-left: -4px;
   /*text-align: center;*/
   padding: 10px;
 }
@@ -349,6 +353,7 @@
 }
 
 .font-title{
+    margin-top: -10px;
     background-color: #FAFAbc;
     color: blue;
     text-align: center;

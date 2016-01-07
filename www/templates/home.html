@@ -11,10 +11,10 @@
     <div class="list locate">
       <div class="item item-button-right">
         My location
-        <p>{{currentLocationString}}</p>
-        <button class="button button-small button-stable" ui-sref="app.location">
+        <p>{{homecity}}, {{homecountry}}</p>
+        <a class="button button-small button-stable" ng-click="openChange()">
           Change
-        </button>
+        </a>
       </div>
     </div>
     <div class="btnAd">

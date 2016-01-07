@@ -1,11 +1,12 @@
 <ion-modal-view>
     <ion-header-bar class="bar bar-header bar-balanced" align-title="left">
+        <button ng-click="back()" class="button icon-back ion-chevron-left button-clear button-dark"></button>
         <h1 class="title">Select your country</h1>
     </ion-header-bar>
-   <ion-content>
+    <ion-content>
        <div class="card cardcountry">
            <div class="list listcountry" ng-repeat="pays in listpays">
-               <a ng-click="country(pays.namePays)">
+               <a ng-click="countrychange(pays.namePays)">
                <div class="item">
                    {{pays.namePays}}
                </div>

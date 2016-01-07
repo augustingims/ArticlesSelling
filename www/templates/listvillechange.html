@@ -1,6 +1,6 @@
 <ion-modal-view>
     <ion-header-bar class="bar bar-header bar-balanced" align-title="left">
-        <button ng-click="close()" class="button icon-back ion-chevron-left button-clear button-dark"></button>
+        <button ng-click="closecity()" class="button icon-back ion-chevron-left button-clear button-dark"></button>
         <h1 class="title">Select your city</h1>
     </ion-header-bar>
     <ion-content>
@@ -10,13 +10,13 @@
             </label>
         </div>
         <div class="card ville">
-            <div class="list listville" ng-repeat="city in listville | filter:search">
-                <a ng-click="selectcity(city.nameVille)">
-                    <div class="item">
-                        {{city.nameVille}}
-                    </div>
-                </a>
-            </div>
+        <div class="list listville" ng-repeat="city in listville | filter:search">
+            <a ng-click="citychange(city.nameVille)">
+                <div class="item">
+                {{city.nameVille}}
+                </div>
+            </a>
+        </div>
         </div>
     </ion-content>
 </ion-modal-view>

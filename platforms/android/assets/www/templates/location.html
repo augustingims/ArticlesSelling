@@ -1,17 +1,23 @@
-<ion-view view-title="Location">
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-balanced" align-title="left">
+        <button ng-click="closechange()" class="button icon-back ion-chevron-left button-clear button-dark"></button>
+        <h1 class="title">Change your location</h1>
+    </ion-header-bar>
     <ion-content>
         <div class="card">
-           <div class="list">
-               <div class="item">
-                   Autolocation
-               </div>
-               <div class="item">
-                   Country
-               </div>
-               <div class="item">
-                   City
-               </div>
-           </div>
+            <div class="list">
+                <div class="item">
+                    Autolocation
+                </div>
+                <div class="item" ng-click="openChangepays()">
+                    Country
+                    <p>{{homecountry}}</p>
+                </div>
+                <div class="item" ng-click="openChangeville()">
+                    City
+                    <p>{{homecity}}</p>
+                </div>
+            </div>
         </div>
     </ion-content>
-</ion-view>
+</ion-modal-view>

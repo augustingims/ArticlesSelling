@@ -1,19 +1,22 @@
-<ion-view view-title="Select your city">
-    <ion-nav-buttons side="left"></ion-nav-buttons>
-    <ion-nav-buttons side="right"></ion-nav-buttons>
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-balanced" align-title="left">
+        <button ng-click="close()" class="button icon-back ion-chevron-left button-clear button-dark"></button>
+        <h1 class="title">Select your city</h1>
+    </ion-header-bar>
     <ion-content>
         <div class="card">
             <label class="item item-input">
-                <input type="text" ng-model="search" placeholder="FIND YOUR CITY">
+                <input type="text" ng-model="search" placeholder="Find your city">
             </label>
         </div>
         <div class="card ville">
-
-        <div class="list listville" ng-repeat="city in listville | filter:search">
-            <a href="#/app/home/{{city.nameVille}}" class="item">
-                {{city.nameVille}}
-            </a>
-        </div>
+            <div class="list listville" ng-repeat="city in listville | filter:search">
+                <a ng-click="selectcity(city.nameVille)">
+                    <div class="item">
+                        {{city.nameVille}}
+                    </div>
+                </a>
+            </div>
         </div>
     </ion-content>
-</ion-view>
+</ion-modal-view>

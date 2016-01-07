@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'services','ksSwiper','ngStorage'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksSwiper','ngStorage'])
 
   .run(function($ionicPlatform,$state) {
   $ionicPlatform.ready(function() {
@@ -19,11 +19,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-    if(window.localStorage.getItem("country")!= null && window.localStorage.getItem("city")!=null){
+    if(window.localStorage.getItem("country")== null && window.localStorage.getItem("city")==null){
        $state.go("app.home");
-    }else{
-      $state.go("app.listpays")
     }
+
     if(window.Connection) {
       if(navigator.connection.type == Connection.NONE) {
         $ionicPopup.confirm({
@@ -57,7 +56,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
       }
     })
     .state('app.home', {
-      url: '/home/:id',
+      url: '/home',
       views: {
         'menuContent': {
           templateUrl: 'templates/home.html',
@@ -102,15 +101,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
           }
         }
       })
-      .state('app.location', {
-        url: '/location',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/location.html',
-            controller: 'LocationCtrl'
-          }
-        }
-      })
 
       .state('app.signUp', {
         url: '/login/:signUp',
@@ -135,23 +125,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
             templateUrl: 'templates/fashion.html'
           }
         }
-      }).state('app.listpays', {
-        url: '/listpays',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/listpays.html',
-            controller: 'ListPaysCtrl'
-          }
-        }
-      }).state('app.listville', {
-        url: '/listville/:id',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/listville.html',
-            controller: 'ListVilleCtrl'
-          }
-        }
-      }) .state('app.hobbies', {
+      }).state('app.hobbies', {
         url: '/hobbies',
         views: {
           'menuContent': {
@@ -297,9 +271,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'se
             controller: 'MessageCtrl'
           }
         }
+      })
+      .state('app.description', {
+        url: '/description',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/description.html',
+            controller:'DescriptionCtrl'
+
+          }
+        }
+      })
+      .state('app.contact', {
+        url: '/contact',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/contact.html',
+            controller:'ContactCtrl'
+
+          }
+        }
       });
-
-
-
     $urlRouterProvider.otherwise('/app/home');
   });

@@ -1,0 +1,36 @@
+<ion-view view-title="Contact information ">
+	<ion-content  class="padding" >
+
+
+    <div class="card" >
+    <div class="padding">
+        <form name="ctct" novalidate>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Adresse email</span>
+    <input type="text" placeholder="Adresse email" ng-minlength="5" mg-model="email" required></label>
+     <label class="item item-input item-floating-label"><span class="input-label">Numero de telephone</span>
+
+    <input type="text" placeholder="Numero de telephone" ng-minlength="5" ng-model="phone" required>
+  </label>
+          </div>
+
+        </div>
+  
+
+        <button class="button button-full button-balanced" type="submit">
+  Submit 
+</button>
+      </form>
+        
+        <div class="padding">
+            <p ng-show="ctct.email.$error.required">* Username is required</p>
+            <p ng-show="ctct.email.$invalid && !myForm.username.$pristine">* Username must be an email address</p>
+            <p ng-show="ctct.email.$error.minlength">* Username must be longer than 5 characters</p>
+            <p ng-show="ctct.phone.$error.required">* Password is required</p>
+            <p ng-show="ctct.phone.$error.minlength">* Password must be longer than 6 characters</p>
+        </div>
+        
+
+	</ion-content>
+
+</ion-view>

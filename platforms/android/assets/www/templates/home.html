@@ -1,12 +1,20 @@
 <ion-view view-title="SellYourArticle">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-android-search">
+    </button>
+  </ion-nav-buttons>
   <ion-content>
     <div class="list locate">
       <div class="item item-button-right">
         My location
-        <p>{{currentLocationString}}</p>
-        <button class="button button-small button-stable" ui-sref="app.location">
+        <p>{{homecity}}, {{homecountry}}</p>
+        <a class="button button-small button-stable" ng-click="openChange()">
           Change
-        </button>
+        </a>
       </div>
     </div>
     <div class="btnAd">
@@ -19,7 +27,7 @@
       <ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6,7,8]">
         <div class="feed-item">
           <div class="feed-media">
-        <img ng-src="img/puppy-{{s}}.jpg" width="100%">
+        <img ng-src="img/puppy-{{s}}.jpg" width="100%" >
             <div class="feed-gradient-overlay"></div>
             <h6 class="feed-title">15 000cfa</h6>
           </div>

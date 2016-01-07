@@ -1,0 +1,101 @@
+<ion-view view-title="Description ">
+	<ion-content  class="padding" >
+
+
+    <div class="card" >
+    <div class="padding">
+        <form name="description" novalidate>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Title: Que vendez-vous?</span>
+    <input type="text" name="username" placeholder="Title" ng-minlength="5" required></label>
+     <label class="item item-input item-floating-label"><span class="input-label">Description</span>
+
+    <input type="text" placeholder="Description" ng-minlength="5" required>
+  </label>
+          </div>
+
+        </div>
+  
+
+<div class="card" >
+    <div class="padding">
+      <label class="item item-input item-floating-label">
+         <span class="input-label">Prix (en Fcfa)</span>
+    <input type="text" placeholder="Prix (en Fcfa)" required></label>
+     
+ 
+          </div>
+
+    </div>
+         
+    <div class="card" >
+    
+      <label class="item item-input item-floating-label">
+    <span class="input-label">Location</span>
+    <input type="text" placeholder="Location" ng-minlength="5" required>
+  </label>
+         
+</div>
+        
+        <div class="card">
+           <ul class="list">
+
+  <li class="item item-toggle">
+   Negociable ?
+     <label class="toggle toggle-assertive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+</ul>
+        
+        </div>
+        Etat de la marchandise
+        <div class="card">
+        
+            <div class="list">
+
+                
+                </label>
+        
+                <label class="item item-radio">
+                     <input type="radio" name="group">
+                        <div class="radio-content">
+                              <div class="item-content">
+                                Occasion
+                              </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                        </div>
+                </label>
+        
+                <label class="item item-radio">
+                     <input type="radio" name="group">
+                        <div class="radio-content">
+                              <div class="item-content">
+                                Neuf
+                              </div>
+                                <i class="radio-icon ion-checkmark"></i>
+                        </div>
+                </label>
+        
+            </div>
+
+        <button class="button button-full button-balanced" type="submit">
+  Submit 
+</button>
+        
+        </form>
+        
+        <div class="padding">
+            <p ng-show="description.username.$error.required">* Username is required</p>
+            <p ng-show="description.username.$invalid && !description.username.$pristine">* Username must be an email address</p>
+            <p ng-show="description.username.$error.minlength">* Username must be longer than 5 characters</p>
+            
+        </div>
+
+	</ion-content>
+
+</ion-view>

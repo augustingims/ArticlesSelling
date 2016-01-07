@@ -19,7 +19,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-    if(window.localStorage.getItem("country")== null && window.localStorage.getItem("city")==null){
+    if(window.localStorage.getItem("country")!= null && window.localStorage.getItem("city")!=null){
        $state.go("app.home");
     }
 
@@ -115,56 +115,64 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
         url: '/technology',
         views: {
           'menuContent': {
-            templateUrl: 'templates/technology.html'
+            templateUrl: 'templates/technology.html',
+            controller: 'ElementsCat'
           }
         }
       }) .state('app.fashion', {
         url: '/fashion',
         views: {
           'menuContent': {
-            templateUrl: 'templates/fashion.html'
+            templateUrl: 'templates/fashion.html',
+            controller: 'ElementsCat'
           }
         }
       }).state('app.hobbies', {
         url: '/hobbies',
         views: {
           'menuContent': {
-            templateUrl: 'templates/hobbies.html'
+            templateUrl: 'templates/hobbies.html',
+            controller: 'ElementsCat'
           }
         }
       }) .state('app.real', {
         url: '/real',
         views: {
           'menuContent': {
-            templateUrl: 'templates/real.html'
+            templateUrl: 'templates/real.html',
+            controller: 'ElementsCat'
           }
         }
       }) .state('app.furniture', {
         url: '/furniture',
         views: {
           'menuContent': {
-            templateUrl: 'templates/furniture.html'
+            templateUrl: 'templates/furniture.html',
+            controller: 'ElementsCat'
           }
         }
       }) .state('app.farming', {
         url: '/farming',
         views: {
           'menuContent': {
-            templateUrl: 'templates/farming.html'
+            templateUrl: 'templates/farming.html',
+            controller: 'ElementsCat'
           }
         }
       }) .state('app.services', {
         url: '/services',
         views: {
           'menuContent': {
-            templateUrl: 'templates/services.html'
+            templateUrl: 'templates/services.html',
+            controller: 'ElementsCat'
           }
         }
       }) .state('app.vehicules', {
         url: '/vehicules',
         views: {
           'menuContent': {
-            templateUrl: 'templates/vehicules.html'
+            templateUrl: 'templates/vehicules.html',
+            controller: 'ElementsCat'
           }
         }
       })

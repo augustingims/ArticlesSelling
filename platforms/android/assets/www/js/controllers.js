@@ -543,6 +543,19 @@ angular.module('starter.controllers', [])
         }
 
     })
+    .controller('ElementsCat', function($scope){
+
+
+        $scope.itemservice = ['Services','Classes courses','Offered Jobs'];
+        $scope.itemreal = ['Lands','Houses - Apartments for sale','Houses - Apartments for rent','Office - Shops - Commercial'];
+        $scope.itemhobbies = ['Musical instruments','Books - CDs - DVD','Sporting goods - Bicycles','Toys and games','Art - Collectibles'];
+        $scope.itemvehicules = ['Cars','MotoCycles','Cars Accessories','Trucks-Commercial-Agricultural'];
+        $scope.itemfarming = ['Live stock Animals','Agriculture - Food','Machinery -Tools'];
+        $scope.itemfashion = ['Clothing and Shoes','Babies and Kids','Watches - Jewelry - Accessoires','Health - Beauty'];
+        $scope.itemfurniture = ['Furniture - Decor - Garden','Home Appliances','Other Home - Furniture - Garden'];
+        $scope.itemtechnology = ['Mobile Phones - Tablet - Accessories','Computers - Laptops','Tv - Audio - Video','Other Electronics','Video Games - Consoles','Camera and Accessories'];
+
+    })
     /*
     .controller('SideCtrl', function($scope, $ionicSideMenuDelegate, ionicMaterialInk, ionicMaterialMotion, $timeout) {
         $scope.maList =[];

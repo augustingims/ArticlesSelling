@@ -317,8 +317,79 @@ angular.module('starter.controllers', [])
     .controller('LoginCtrl', function($scope) {
 
     })
-    .controller('SettingCtrl', function($scope) {
+    .controller('SettingCtrl', function($scope,$ionicModal) {
 
+        $scope.homecity= window.localStorage.getItem('city');
+
+        $scope.homecountry= window.localStorage.getItem('country');
+
+        //Creation des Modal
+        $ionicModal.fromTemplateUrl('templates/listvillechange.html', {
+            scope: $scope,
+            animation: 'slide-in-up'
+        }).then(function(modal) {
+            $scope.closeville = modal;
+        });
+        $ionicModal.fromTemplateUrl('templates/listpayschange.html', {
+            scope: $scope,
+            animation: 'slide-in-up'
+        }).then(function(modal) {
+            $scope.closepays = modal;
+        });
+        $ionicModal.fromTemplateUrl('templates/location.html', {
+            scope: $scope,
+            animation: 'slide-in-up'
+        }).then(function(modal) {
+            $scope.change = modal;
+        });
+       // Ouverture des Modal
+        $scope.openChange = function() {
+            $scope.change.show();
+        };
+        $scope.openChangeville = function() {
+            $scope.closeville.show();
+        };
+        $scope.openChangepays = function() {
+            $scope.closepays.show();
+        };
+        // Click sur Item Du Model Country
+        $scope.countrychange = function(country){
+            window.localStorage.setItem("country", country);
+            $scope.homecountry= window.localStorage.getItem('country');
+            console.log($scope.homecountry);
+            $scope.back();
+        };
+        // Click sur Item Du Model City
+        $scope.citychange = function(ville){
+            window.localStorage.setItem("city", ville);
+            $scope.homecity= window.localStorage.getItem('city');
+            console.log($scope.homecity);
+            $scope.closecity();
+        };
+        //Fermerture des Modal
+        $scope.closecity = function() {
+            $scope.closeville.hide();
+        };
+        $scope.back = function() {
+            $scope.closepays.hide();
+        };
+        $scope.closechange = function() {
+            $scope.change.hide();
+        };
+        $scope.listpays = [{namePays:'Cameroun'},
+            {namePays:'Algerie'},
+            {namePays:'Nigeria'},
+            {namePays:'Ghana'},
+            {namePays:'Ethiopie'},
+            {namePays:'Niger'},
+            {namePays:'Mali'}];
+        $scope.listville = [{nameVille:'Douala'},
+            {nameVille:'Yaoundé'},
+            {nameVille:'buea'},
+            {nameVille:'mandjo'},
+            {nameVille:'couba'},
+            {nameVille:'conssamba'},
+            {nameVille:'bertoua'}];
     })
     .controller('LocationCtrl', function($scope) {
 

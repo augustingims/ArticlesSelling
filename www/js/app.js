@@ -197,6 +197,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categoriesfashion.html',
             controller: 'CategoriesfashionCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       }).state('app.categoriesfarming', {
@@ -205,6 +209,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categoriesfarming.html',
             controller: 'CategoriesfarmingCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       }).state('app.categoriesfurniture', {
@@ -213,6 +221,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categoriesfurniture.html',
             controller: 'CategoriesfurnitureCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       }).state('app.categorieshobbies', {
@@ -221,6 +233,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categorieshobbies.html',
             controller: 'CategorieshobbiesCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       }).state('app.categoriesreal', {
@@ -229,6 +245,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categoriesreal.html',
             controller: 'CategoriesrealCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       }).state('app.categoriesservices', {
@@ -237,6 +257,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categoriesservices.html',
             controller: 'CategoriesservicesCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       }).state('app.categoriesvehicules', {
@@ -245,6 +269,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categoriesvehicules.html',
             controller: 'CategoriesvehiculesCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       }).state('app.categoriesDetail', {

@@ -183,6 +183,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categories.html',
             controller: 'CategoriesCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       })

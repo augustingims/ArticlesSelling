@@ -1,4 +1,4 @@
-<ion-view view-title="SellYourArticle">
+<ion-view view-title="{{ 'ht' | translate }}">
   <ion-nav-buttons side="left">
     <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
     </button>
@@ -6,11 +6,13 @@
   <ion-nav-buttons side="right">
     <button class="button button-icon button-clear ion-android-search">
     </button>
+    <button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)">
+    </button>
   </ion-nav-buttons>
   <ion-content>
     <div class="list locate">
       <div class="item item-button-right">
-        My location
+       <p translate="hp1">My location</p>
         <p>{{homecity}}, {{homecountry}}</p>
         <a class="button button-small button-stable" ng-click="openChange()">
           Change
@@ -18,11 +20,11 @@
       </div>
     </div>
     <div class="btnAd">
-      <button class="button button-block button-energized-900 icon-left ion-compose" ui-sref="app.add">
+      <button class="button button-block button-energized-900 icon-left ion-compose" ui-sref="app.add" translate="ad">
         Submit Ad
       </button>
     </div>
-      <div class="item-divider last">Lastest Article</div>
+      <div class="item-divider last" translate="last">Lastest Article</div>
     <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="3" space-between="5" pagination-clickable="false" override-parameters="{effect: 'coverflow',coverflow: {rotate: 50,stretch: 0,depth: 100,modifier: 1,slideShadows : false}}"  on-ready="onReadySwiper(swiper)">
       <ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
         <div class="feed-item">
@@ -34,44 +36,39 @@
         </div>
       </ks-swiper-slide>
     </ks-swiper-container>
-    <!-- <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="4" space-between="0" pagination-clickable="false"  on-ready="onReadySwiper(swiper)">
-			<ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6,7,8]">
-				<img ng-src="img/puppy-{{s}}.jpg" width="100%">
-			</ks-swiper-slide>
-		</ks-swiper-container>	-->
     <div class="list selectcat">
-      <div class="item item-divider">Categories</div>
-      <a class="item item-icon-left" href="#/app/categories">
+      <div class="item item-divider" translate="cat">Categories</div>
+      <a class="item item-icon-left"  href="#/app/categories">
         <i class="icon icon1 ion-android-desktop"></i>
-        Technology - Electronics
+        <p translate="cat1">Technology - Electronics</p>
       </a>
       <a class="item item-icon-left"  href="#/app/categoriesfashion">
         <i class="icon icon2 ion-tshirt"></i>
-        Fashion and Beauty
+        <p translate="cat2">Fashion and Beauty</p>
       </a>
       <a class="item item-icon-left"  href="#/app/categoriesfurniture">
         <i class="icon icon3 ion-ios-albums"></i>
-        Home - Furniture - Garden
+        <p translate="cat3"> Home - Furniture - Garden</p>
       </a>
       <a class="item item-icon-left"  href="#/app/categorieshobbies">
         <i class="icon icon4 ion-android-bicycle"></i>
-        Hobbies - Art - Sports
+        <p translate="cat4">Hobbies - Art - Sports</p>
       </a>
       <a class="item item-icon-left"  href="#/app/categoriesfarming">
         <i class="icon icon5 ion-android-bus"></i>
-        Farming - Animals
+        <p translate="cat5">Farming - Animals</p>
       </a>
       <a class="item item-icon-left"  href="#/app/categoriesvehicules">
         <i class="icon icon6 ion-model-s"></i>
-        Vehicules
+        <p translate="cat6">Vehicles</p>
       </a>
       <a class="item item-icon-left"  href="#/app/categoriesreal">
         <i class="icon icon7 ion-android-home"></i>
-        Real Estate
+        <p translate="cat7">Real Estate</p>
       </a>
       <a class="item item-icon-left"  href="#/app/categoriesservices">
         <i class="icon icon8 ion-briefcase"></i>
-        Jobs and Services
+        <p translate="cat8">Jobs and Services</p>
       </a>
     </div>
   </ion-content>

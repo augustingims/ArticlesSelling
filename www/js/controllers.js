@@ -14,7 +14,7 @@ angular.module('starter.controllers', [])
       $ionicSideMenuDelegate.toggleLeft();
     };
   })
-  .controller('mainhome', function($scope, $http,$timeout,$ionicPlatform,$rootScope,$ionicModal) {
+  .controller('mainhome', function($scope, $http,$timeout,$ionicPlatform,$rootScope,$ionicModal,$ionicPopover,$translate) {
     var _this = this;
 
       $scope.swiper = {};
@@ -153,6 +153,24 @@ angular.module('starter.controllers', [])
             {nameVille:'couba'},
             {nameVille:'conssamba'},
             {nameVille:'bertoua'}];
+
+        $scope.ChangeLanguage = function(lang){
+            $translate.use(lang);
+            $scope.closePopover();
+        };
+
+        $ionicPopover.fromTemplateUrl('templates/ChooseTranslate.html', {
+            scope: $scope
+        }).then(function(popover) {
+            $scope.popover = popover;
+        });
+        $scope.closePopover = function() {
+            $scope.popover.hide();
+        };
+        //Cleanup the popover when we're done with it!
+        $scope.$on('$destroy', function() {
+            $scope.popover.remove();
+        });
 
   })
 

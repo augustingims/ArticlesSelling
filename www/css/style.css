@@ -380,3 +380,44 @@
     background-color: #FAFAbc;
     padding: 10px;
 }
+.platform-android .popover{
+    border-radius: 10px;
+    margin-top: 0px;
+}
+.platform-android .popover-arrow{
+    position: absolute;
+    display: block;
+    top: -17px;
+    width: 30px;
+    height: 19px;
+    overflow: hidden;
+}
+.platform-android .popover-arrow::after {
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #FFF;
+    border-radius: 3px;
+    content: "";
+    transform: rotate(-45deg);
+}
+.popover{
+    width:100px ;
+    height: 100px;
+    left: 270px;
+}
+.popover-arrow{
+    left: 0px;
+}
+.pop .item{
+    margin: 0px;
+    padding: 0px;
+    min-height: 40px;
+}
+.pop{
+    padding: 0px;
+    height: 80px;
+    margin-top: -10px;
+}

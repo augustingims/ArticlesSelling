@@ -1,0 +1,10 @@
+<ion-popup-view>
+    <ion-content>
+        <div class="list call">
+            <div class="item item-icon-right" ng-repeat="number in phone">
+                <a ng-href="sms:{{number}}">{{number}}</a>
+                    <i class="icon ion-chatbox"></i>
+            </div>
+        </div>
+    </ion-content>
+</ion-popup-view>

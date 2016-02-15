@@ -1,0 +1,34 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-balanced" align-title="left">
+        <button ng-click="hideEmail()" class="button icon-back ion-chevron-left button-clear button-dark"></button>
+        <h1 class="title">Send Your Message</h1>
+    </ion-header-bar>
+    <ion-content>
+        <form name="form" ng-submit="sendEmail()" novalidate>
+            <div class="item-input-inset">
+                <h4>Email:</h4>
+                <label class="item-input-wrapper">
+                    <input ng-model="fromCC" type="text" placeholder="From">
+                </label>
+            </div>
+            <div class="item-input-inset">
+                <h4>Tel:&nbsp;</h4>
+                <label class="item-input-wrapper">
+                    <input ng-model="subjet" type="tel" placeholder="Subject">
+                </label>
+            </div>
+            <h4> &nbsp;&nbsp;Message</h4>
+            <div class="item-input-inset">
+                <label>
+        <textarea class="item-input-wrapper" ng-model="bodyEmail" placeholder="message" rows="14" cols="33">
+        </textarea>
+                </label>
+            </div>
+            <div class="row">
+                <button class="button button-block button-energized icon-left">
+                    send
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

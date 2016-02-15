@@ -1,0 +1,265 @@
+<ion-view class="detaillist">
+    <fab-button ui-sref="app.add">
+        <i class="icon ion ion-edit"></i>
+    </fab-button>
+    <ion-nav-bar class="myhead">
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-arrow-left-c"></i>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="right">
+            <button class="button button-icon button-clear ion-android-favorite">
+            </button>
+            <a ng-href="#/app/add"><button class="button button-icon button-clear ion-edit"></button></a>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+  <ion-content class="slidelist">
+      <ion-slide-box auto-play="false" does-continue ="true" slide-interval="3000">
+          <ion-slide class="slideimg" ng-repeat="i in [1,2,4,5,6]">
+              <img ng-src="img/{{i}}.jpg"  style="height:300px;display:block">
+          </ion-slide>
+      </ion-slide-box>
+      <div class="locationads">
+          <div class="card">
+              <div class="row">
+              <div class="text-left">
+                  <strong>Location</strong>
+              </div>
+              <div class="text-right rigth">
+                  <span><span class="grey">Douala</span>&nbsp;&nbsp;<i class="icon ion-location"></i></span>
+              </div>
+              </div>
+          </div>
+      </div>
+      <div class="block">
+         <div class="titre">
+             <strong>Google drops Nexus 4 by $100, offers 15 day price protection refund</strong>
+         </div>
+          <div class="row lines">
+                  <span class="text-success">
+                      <i class="icon ion-android-time"></i>
+                      il ya 15 mins
+                  </span>
+                  <span class="rig">
+                      <i class="icon ion-pricetags"></i>
+                      &nbsp;15 000 000 FCFA
+                  </span>
+          </div>
+          <div class="row lines">
+                  <strong class="grey">
+                      Category
+                  </strong>
+                  <strong class="rigt grey">
+                      &nbsp;&nbsp;&nbsp;Phone
+                  </strong>
+          </div>
+          <div class="row space">
+                  <span class="item-note">
+                      Make Year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span>
+                  <span class="rigt item-note">
+                      <strong>2016</strong>
+                  </span>
+          </div>
+          <div class="row space">
+                  <span class="item-note">
+                      Condiction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span>
+                  <span class="rigt item-note">
+                      <strong>new</strong>
+                  </span>
+          </div>
+          <div class="row space">
+                  <span class="item-note">
+                      Sub-Category
+                  </span>
+                  <span class="rigt item-note">
+                      <strong>wanted</strong>
+                  </span>
+          </div>
+      </div>
+      <div class="block">
+          <div class="row">
+              <strong>Description</strong>
+          </div>
+          <div class="row">
+              <span class="addesc">
+                  In the example, the first item only has a left aligned icon.
+                  The second item has both left and right side icons.
+                  The third item has a left aligned icon and an item-note.
+              </span>
+          </div>
+          <div class="descrip">
+              <span class="grey label-ligh margin-right-5">
+                  Views : 251
+              </span>&nbsp;
+              <strong class="text-success">
+                  <i class="icon ion-checkmark-circled text-success"></i>
+                  negociable
+              </strong>
+          </div>
+          </div>
+          <div class="author">
+              <div class="cont">
+              <div class="browsey">
+                  <div class="browser">
+                      <div class="a">
+                         <i class="icon ion-android-contact"></i>
+                      </div>
+                  </div>
+                  <p><strong>Augustin</strong></p>
+              </div>
+              </div>
+              <p class="attach">you have the ability to attach this user</p>
+          </div>
+      <div class="similar">
+          <div class="item-divider categories "><strong class="col-offset-5">Other ads</strong></div>
+          <a>
+          <div class="media  border-bottom-grey margin-none padding-top-bottom ribbon-box padding-top-10">
+              <div class="pull-left text-center iconsize" >
+                   <span class="photo-count">
+                      <i class="icon ion-camera"></i>
+                      2
+                  </span>
+                  <img  src="img/1.jpg" class="media-object left-img-small img-thumbnail" >
+
+              </div>
+              <div class="media-body" style="padding-right: 3px; padding-left: 3px">
+                  <div class="">
+                      <h3 class="media-heading ellipsis text-lowercase">
+                          <strong>Google drops Nexus 4 by $100, offers 15 day price protection refund</strong>
+                      </h3>
+                      <div class="ellipsis bottom-buffer-10">
+            <span class="date grey">
+             <i class="icon ion-android-time grey"></i>
+              il ya 15 mins
+            </span>&nbsp;
+            <span class="c_ads">
+            <em>
+                <i class="icon ion-location grey"></i>
+                <span>Douala</span>
+            </em>
+            </span></div>
+                      <div class="bottom-buffer-10">
+                          <label class="label-light margin-right-5">Memoire 16Go</label>
+                          <label class="label-light margin-right-5"> Camera 5 MP</label>
+                      </div>
+                      <div>
+              <span class="label-light font-size-16 margin-right-5">
+                  <i class="icon ion-pricetags light-grey"></i> 150 000 FCFA
+              </span>&nbsp;
+                          <strong class="text-success font-size-16">
+                              <i class="icon ion-checkmark-circled text-success"></i>
+                              negociable
+                          </strong>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </a>
+          <a>
+          <div class="media  border-bottom-grey margin-none padding-top-bottom ribbon-box padding-top-10">
+              <div class="pull-left text-center iconsize" >
+                   <span class="photo-count">
+                      <i class="icon ion-camera"></i>
+                      2
+                  </span>
+                  <img  src="img/1.jpg" class="media-object left-img-small img-thumbnail" >
+
+              </div>
+              <div class="media-body" style="padding-right: 3px; padding-left: 3px">
+                  <div class="">
+                      <h3 class="media-heading ellipsis text-lowercase">
+                          <strong>Google drops Nexus 4 by $100, offers 15 day price protection refund</strong>
+                      </h3>
+                      <div class="ellipsis bottom-buffer-10">
+            <span class="date grey">
+             <i class="icon ion-android-time grey"></i>
+              il ya 15 mins
+            </span>&nbsp;
+            <span class="c_ads">
+            <em>
+                <i class="icon ion-location grey"></i>
+                <span>Douala</span>
+            </em>
+            </span></div>
+                      <div class="bottom-buffer-10">
+                          <label class="label-light margin-right-5">Memoire 16Go</label>
+                          <label class="label-light margin-right-5"> Camera 5 MP</label>
+                      </div>
+                      <div>
+              <span class="label-light font-size-16 margin-right-5">
+                  <i class="icon ion-pricetags light-grey"></i> 150 000 FCFA
+              </span>&nbsp;
+                          <strong class="text-success font-size-16">
+                              <i class="icon ion-checkmark-circled text-success"></i>
+                              negociable
+                          </strong>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </a>
+          <a>
+          <div class="media  border-bottom-grey margin-none padding-top-bottom ribbon-box padding-top-10">
+              <div class="pull-left text-center iconsize" >
+                   <span class="photo-count">
+                      <i class="icon ion-camera"></i>
+                      2
+                  </span>
+                  <img  src="img/1.jpg" class="media-object left-img-small img-thumbnail" >
+
+              </div>
+              <div class="media-body" style="padding-right: 3px; padding-left: 3px">
+                  <div class="">
+                      <h3 class="media-heading ellipsis text-lowercase">
+                          <strong>Google drops Nexus 4 by $100, offers 15 day price protection refund</strong>
+                      </h3>
+                      <div class="ellipsis bottom-buffer-10">
+            <span class="date grey">
+             <i class="icon ion-android-time grey"></i>
+              il ya 15 mins
+            </span>&nbsp;
+            <span class="c_ads">
+            <em>
+                <i class="icon ion-location grey"></i>
+                <span>Douala</span>
+            </em>
+            </span></div>
+                      <div class="bottom-buffer-10">
+                          <label class="label-light margin-right-5">Memoire 16Go</label>
+                          <label class="label-light margin-right-5"> Camera 5 MP</label>
+                      </div>
+                      <div>
+              <span class="label-light font-size-16 margin-right-5">
+                  <i class="icon ion-pricetags light-grey"></i> 150 000 FCFA
+              </span>&nbsp;
+                          <strong class="text-success font-size-16">
+                              <i class="icon ion-checkmark-circled text-success"></i>
+                              negociable
+                          </strong>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </a>
+      </div>
+      <div class="row">
+          <div class="bar">
+              <div class="tabs tabs-icon-top subtabs">
+                  <a class="tab-item active" ng-click="call()">
+                      <i class="icon ion-android-call"></i>
+                      Call
+                  </a>
+                  <a class="tab-item" ng-click="sms()">
+                      <i class="icon ion-android-mail"></i>
+                       SMS
+                   </a>
+                  <a class="tab-item" ng-click="openEmail()">
+                  <i class="icon ion-android-chat"></i>
+                  Message
+                  </a>
+              </div>
+          </div>
+      </div>
+  </ion-content>
+</ion-view>

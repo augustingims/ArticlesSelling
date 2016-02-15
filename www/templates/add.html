@@ -1,13 +1,23 @@
 <ion-view view-title=" Submit Your Ad">
+    <ion-nav-buttons side="right" ng-show="images[0]">
+        <button class="button button-icon icon ion-plus-circled" ng-click="selImages()"></button>
+    </ion-nav-buttons>
     <ion-content>
-        <a href="#">
-        <div class="hero photoadd">
-            <div class="content">
-                <div class="avatar photo" style=""></div>
-                <h3><span class="dark">Add Photo</span></h3>
-            </div>
-        </div>
-        </a>
+        <ion-slide-box auto-play="false" does-continue ="true" slide-interval="3000">
+            <ion-slide class="slideimg" ng-show="!images[0]">
+                <a ng-click="selImages()">
+                    <div class="hero photoadd">
+                        <div class="content">
+                            <div class="avatar photo" style=""></div>
+                            <h3><span class="dark">Add Photo</span></h3>
+                        </div>
+                    </div>
+                </a>
+            </ion-slide>
+            <ion-slide class="slideimg" ng-repeat="img in images" ng-show="images.length > 0">
+                <img ng-src="{{img.image}}" ng-click="showConfirm($index)" style="height:250px;display:block">
+            </ion-slide>
+        </ion-slide-box>
         <div class="item infos">
          <p>Ads with photos sell up to 5 more</p>
         </div>
@@ -29,8 +39,8 @@
                 </div>
             </a>
         </div>
+        <button class=" bar  bar-stable">
+            Sumbit Now
+        </button>
     </ion-content>
-    <button class=" bar bar-footer bar-stable">
-        Sumbit Now
-    </button>
 </ion-view>

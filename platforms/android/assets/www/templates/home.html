@@ -1,78 +1,192 @@
-<ion-view view-title="SellYourArticle">
+<ion-view view-title="{{ 'ht' | translate }}">
   <ion-nav-buttons side="left">
     <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
     </button>
   </ion-nav-buttons>
   <ion-nav-buttons side="right">
-    <button class="button button-icon button-clear ion-android-search">
+    <a ng-href="#/app/add"><button class="button button-icon button-clear ion-edit"></button></a>
+    <button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)">
     </button>
   </ion-nav-buttons>
-  <ion-content>
+  <ion-content class="main">
     <div class="list locate">
-      <div class="item item-button-right">
-        My location
-        <p>{{homecity}}, {{homecountry}}</p>
-        <a class="button button-small button-stable" ng-click="openChange()">
-          Change
-        </a>
+      <div class="item">
+        <div class="row">
+        <i class="icon ion-location mapicon"></i>
+        <p class="item-note">Yaoundé, cameroun</p>
+        <span class="locat">
+          <strong>Location</strong>
+           <a ng-click="openChange()">
+             <i class="icon ion-arrow-down-b mapico"></i>
+           </a>
+        </span>
+        </div>
       </div>
     </div>
     <div class="btnAd">
       <button class="button button-block button-energized-900 icon-left ion-compose" ui-sref="app.add">
-        Submit Ad
+        Submit a free Ad
       </button>
     </div>
-      <div class="item-divider last">Lastest Article</div>
+    <div class="card plan">
+      <img src="img/plane.jpg">
+    </div>
+      <div class="item-divider last" translate="last">Lastest Article</div>
     <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="3" space-between="5" pagination-clickable="false" override-parameters="{effect: 'coverflow',coverflow: {rotate: 50,stretch: 0,depth: 100,modifier: 1,slideShadows : false}}"  on-ready="onReadySwiper(swiper)">
-      <ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6,7,8]">
-        <div class="feed-item">
-          <div class="feed-media">
-        <img ng-src="img/puppy-{{s}}.jpg" width="100%" >
-            <div class="feed-gradient-overlay"></div>
-            <h6 class="feed-title">15 000cfa</h6>
-          </div>
+      <ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
+        <div class="pull-left text-center">
+        <img ng-src="img/{{s}}.jpg" width="100%" height="120px">
+            <div class="small grey relative-text-16 adprice">15 000 FCFA</div>
         </div>
       </ks-swiper-slide>
     </ks-swiper-container>
-    <!-- <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="4" space-between="0" pagination-clickable="false"  on-ready="onReadySwiper(swiper)">
-			<ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4,5,6,7,8]">
-				<img ng-src="img/puppy-{{s}}.jpg" width="100%">
-			</ks-swiper-slide>
-		</ks-swiper-container>	-->
-    <div class="list selectcat">
-      <div class="item item-divider">Categories</div>
-      <a class="item item-icon-left" href="#/app/categories">
-        <i class="icon icon1 ion-android-desktop"></i>
-        Technology - Electronics
-      </a>
-      <a class="item item-icon-left"  href="#/app/categoriesfashion">
-        <i class="icon icon2 ion-tshirt"></i>
-        Fashion and Beauty
-      </a>
-      <a class="item item-icon-left"  href="#/app/categoriesfurniture">
-        <i class="icon icon3 ion-ios-albums"></i>
-        Home - Furniture - Garden
-      </a>
-      <a class="item item-icon-left"  href="#/app/categorieshobbies">
-        <i class="icon icon4 ion-android-bicycle"></i>
-        Hobbies - Art - Sports
-      </a>
-      <a class="item item-icon-left"  href="#/app/categoriesfarming">
-        <i class="icon icon5 ion-android-bus"></i>
-        Farming - Animals
-      </a>
-      <a class="item item-icon-left"  href="#/app/categoriesvehicules">
-        <i class="icon icon6 ion-model-s"></i>
-        Vehicules
-      </a>
-      <a class="item item-icon-left"  href="#/app/categoriesreal">
-        <i class="icon icon7 ion-android-home"></i>
-        Real Estate
-      </a>
-      <a class="item item-icon-left"  href="#/app/categoriesservices">
-        <i class="icon icon8 ion-briefcase"></i>
-        Jobs and Services
-      </a>
+    <div class="item-divider last"><Strong>Browse By Category</Strong></div>
+    <ks-swiper-container initial-slide="3" speed="2000" loop="true" show-nav-buttons="false" slides-per-view="3" space-between="5" pagination-clickable="false"  on-ready="onReadySwiper(swiper)">
+      <ks-swiper-slide class="swiper-slide" ng-repeat="s in cat">
+        <a ng-click="catshow(s.namecat,s.idcat)">
+        <div class="browseby">
+          <div class="browse">
+            <div class="a">
+              <i ng-class="getIcon('{{s.namecat}}')"></i>
+            </div>
+          </div>
+          <p>{{s.namecat}}</p>
+        </div>
+        </a>
+      </ks-swiper-slide>
+    </ks-swiper-container>
+    <div class="contient">
+    <div class="list morelist">
+      <div class="item item-button-right">
+        <Strong>Automobiles</Strong>
+        <button class="button button-small button-positive">
+          MORE
+        </button>
+      </div>
+    </div>
+      <div class="row cardlist">
+        <div class="col">
+          <div class="card">
+            <div class="img">
+            <img src="img/1.jpg">
+            </div>
+            <div class="tail">
+              <span> Techno J5 16 Go</span>
+              <p><strong>150 000 FCFA</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="img">
+            <img src="img/2.jpg">
+            </div>
+            <div class="tail">
+              <span> Techno J5 16 Go</span>
+              <p><strong>150 000 FCFA</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><div class="contient">
+    <div class="list morelist">
+      <div class="item item-button-right">
+        <Strong>Jobs</Strong>
+        <button class="button button-small button-positive">
+          MORE
+        </button>
+      </div>
+    </div>
+      <div class="row cardlist">
+        <div class="col">
+          <div class="card">
+            <div class="img">
+            <img src="img/3.jpg">
+            </div>
+            <div class="tail">
+              <span> Techno J5 16 Go</span>
+              <p><strong>150 000 FCFA</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="img">
+            <img src="img/4.jpg">
+            </div>
+            <div class="tail">
+              <span> Techno J5 16 Go</span>
+              <p><strong>150 000 FCFA</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><div class="contient">
+    <div class="list morelist">
+      <div class="item item-button-right">
+        <Strong>Services</Strong>
+        <button class="button button-small button-positive">
+          MORE
+        </button>
+      </div>
+    </div>
+      <div class="row cardlist">
+        <div class="col">
+          <div class="card">
+            <div class="img">
+            <img src="img/5.jpg">
+            </div>
+            <div class="tail">
+              <span> Techno J5 16 Go</span>
+              <p><strong>150 000 FCFA</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="img">
+            <img src="img/6.jpg">
+            </div>
+            <div class="tail">
+              <span> Techno J5 16 Go</span>
+              <p><strong>150 000 FCFA</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><div class="contient">
+    <div class="list morelist">
+      <div class="item item-button-right">
+        <Strong>For Sale</Strong>
+        <button class="button button-small button-positive">
+          MORE
+        </button>
+      </div>
+    </div>
+      <div class="row cardlist">
+        <div class="col">
+          <div class="card">
+            <div class="img">
+            <img src="img/7.jpg">
+            </div>
+            <div class="tail">
+              <span> Techno J5 16 Go</span>
+              <p><strong>150 000 FCFA</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="img">
+            <img src="img/8.jpg">
+            </div>
+            <div class="tail">
+              <span> Techno J5 16 Go</span>
+              <p><strong>150 000 FCFA</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </ion-content>
 </ion-view>

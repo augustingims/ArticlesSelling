@@ -1,19 +1,49 @@
-// Ionic Starter App
+var translations = {
+  "en": {
+    "hp1": "My Location",
+    "last": "Lastest Articles",
+    "ht": "SellYourArticle",
+    "ad": "Submit Ad",
+    "cat":"Categories",
+    "cat1":"Technology - Electronics",
+    "cat2":"Fashion and Beauty",
+    "cat3":"Home - Furniture - Garden",
+    "cat4":"Hobbies - Art - Sports",
+    "cat5":"Farming - Animals",
+    "cat6":"Vehicles",
+    "cat7":"Real Estate",
+    "cat8":"Jobs and Services"
+  },
+  "fr": {
+    "hp1": "Ma Localisation",
+    "last": "Derniers Articles",
+    "ht": "VendTonArticle",
+    "ad": "Soumettez Annonce",
+    "cat":"Catégories",
+    "cat1":"Technologie - Électronique",
+    "cat2":"Mode et Beauté",
+    "cat3":"Maison - Meubles - Jardin",
+    "cat4":"Passe-temps - Art - Sport",
+    "cat5":"Agriculture - Animaux",
+    "cat6":"Véhicules",
+    "cat7":"Immobilier",
+    "cat8":"Emplois et Services"
+  }
+};
+angular.module('starter', ['ionic','ngCordova','ion-fab-button','jett.ionic.filter.bar','starter.controllers','ionic-material','ionic.closePopup','ksSwiper','ngStorage','pascalprecht.translate'])
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksSwiper','ngStorage'])
-
-  .run(function($ionicPlatform,$state) {
+  .run(function($ionicPlatform,$state,$rootScope) {
+      $rootScope.appReady = {status:false};
   $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
+
+    console.log('ionic Ready');
+    $rootScope.appReady.status = true;
+    $rootScope.$apply();
+    console.log('in app.js, appReady is '+$rootScope.appReady.status);
+
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
-
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
@@ -38,7 +68,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
   });
     })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider,$translateProvider) {
+
+      for(lang in translations){
+        $translateProvider.translations(lang, translations[lang]);
+      }
+
+      $translateProvider.preferredLanguage('en');
+
   $stateProvider
     .state('app', {
       url: '/app',
@@ -69,7 +106,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
       views: {
         'menuContent': {
           templateUrl: 'templates/add.html',
-          controller: 'AddCtrl'
+          controller: 'AdsCtrl'
         }
       }
     })
@@ -111,68 +148,68 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           }
         }
       })
-      .state('app.technology', {
-        url: '/technology',
+      .state('app.property', {
+        url: '/Property',
         views: {
           'menuContent': {
-            templateUrl: 'templates/technology.html',
-            controller: 'ElementsCat'
+            templateUrl: 'templates/Property.html',
+            controller: 'AddCtrl'
           }
         }
-      }) .state('app.fashion', {
-        url: '/fashion',
+      }) .state('app.automobiles', {
+        url: '/Automobiles',
         views: {
           'menuContent': {
-            templateUrl: 'templates/fashion.html',
-            controller: 'ElementsCat'
+            templateUrl: 'templates/Automobiles.html',
+           controller: 'AddCtrl'
           }
         }
-      }).state('app.hobbies', {
-        url: '/hobbies',
+      }).state('app.jobs', {
+        url: '/Jobs',
         views: {
           'menuContent': {
-            templateUrl: 'templates/hobbies.html',
-            controller: 'ElementsCat'
+            templateUrl: 'templates/Jobs.html',
+            controller: 'AddCtrl'
           }
         }
-      }) .state('app.real', {
-        url: '/real',
+      }) .state('app.learning', {
+        url: '/Learning',
         views: {
           'menuContent': {
-            templateUrl: 'templates/real.html',
-            controller: 'ElementsCat'
+            templateUrl: 'templates/Learning.html',
+            controller: 'AddCtrl'
           }
         }
-      }) .state('app.furniture', {
-        url: '/furniture',
+      }) .state('app.pets', {
+        url: '/Pets',
         views: {
           'menuContent': {
-            templateUrl: 'templates/furniture.html',
-            controller: 'ElementsCat'
+            templateUrl: 'templates/Pets.html',
+            controller: 'AddCtrl'
           }
         }
-      }) .state('app.farming', {
-        url: '/farming',
+      }) .state('app.community', {
+        url: '/Community',
         views: {
           'menuContent': {
-            templateUrl: 'templates/farming.html',
-            controller: 'ElementsCat'
+            templateUrl: 'templates/Community.html',
+            controller: 'AddCtrl'
           }
         }
       }) .state('app.services', {
-        url: '/services',
+        url: '/Services',
         views: {
           'menuContent': {
-            templateUrl: 'templates/services.html',
-            controller: 'ElementsCat'
+            templateUrl: 'templates/Services.html',
+            controller: 'AddCtrl'
           }
         }
-      }) .state('app.vehicules', {
-        url: '/vehicules',
+      }) .state('app.forsale', {
+        url: '/For Sale',
         views: {
           'menuContent': {
-            templateUrl: 'templates/vehicules.html',
-            controller: 'ElementsCat'
+            templateUrl: 'templates/Forsale.html',
+            controller: 'AddCtrl'
           }
         }
       })
@@ -183,6 +220,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categories.html',
             controller: 'CategoriesCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       })
@@ -193,6 +234,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categoriesfashion.html',
             controller: 'CategoriesfashionCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       }).state('app.categoriesfarming', {
@@ -201,6 +246,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categoriesfarming.html',
             controller: 'CategoriesfarmingCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       }).state('app.categoriesfurniture', {
@@ -209,6 +258,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categoriesfurniture.html',
             controller: 'CategoriesfurnitureCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       }).state('app.categorieshobbies', {
@@ -217,6 +270,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categorieshobbies.html',
             controller: 'CategorieshobbiesCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       }).state('app.categoriesreal', {
@@ -225,6 +282,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categoriesreal.html',
             controller: 'CategoriesrealCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       }).state('app.categoriesservices', {
@@ -233,6 +294,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categoriesservices.html',
             controller: 'CategoriesservicesCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       }).state('app.categoriesvehicules', {
@@ -241,6 +306,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categoriesvehicules.html',
             controller: 'CategoriesvehiculesCtrl'
+          },
+          'right-panel': {
+            templateUrl: 'templates/filter.html',
+            controller:'filterCtrl'
           }
         }
       }).state('app.categoriesDetail', {
@@ -249,6 +318,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material','ksS
           'menuContent': {
             templateUrl: 'templates/categoriesDetail.html',
             controller: 'CategoriesCtrl'
+          }
+        }
+      }).state('app.category', {
+        url: '/category/{id}',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/category.html',
+            controller: 'CategoriesCtrl'
+          }
+        }
+      })
+      .state('app.detail', {
+        url: '/detail/{id}',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/detail.html',
+            controller: 'DetailCtrl'
           }
         }
       })

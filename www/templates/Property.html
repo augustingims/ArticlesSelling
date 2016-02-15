@@ -1,0 +1,16 @@
+<ion-view view-title="Select a Categories">
+    <ion-content>
+      <div class="list element">
+          <div class="item item-icon-left">
+              <i class="icon icon13 ion-android-plane"></i>
+              All in Property
+          </div>
+          <div class="list select">
+              <a href="#/app/category/{{item.id}}" class="item" ng-repeat="item in itemproperty" ng-click="getSubCat(item.namecat)">
+                  {{item.namecat}}
+              </a>
+          </div>
+      </div>
+
+    </ion-content>
+</ion-view>

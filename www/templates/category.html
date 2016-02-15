@@ -1,0 +1,65 @@
+<ion-view view-title="{{nameCat}}">
+    <ion-nav-buttons side="right">
+            <button class="button button-icon button-clear ion-android-search" ng-click="showFilterBar()">
+            </button>
+            <a ng-href="#/app/add"><button class="button button-icon button-clear ion-edit"></button></a>
+        </ion-nav-buttons>
+  <ion-content>
+        <div class="row">
+            <div class="col col-70 color animated fadeInLeft" >
+            </div>
+            <div class="col animated fadeInRight" >
+              <a href="#/app/{{catName}}" class="button button-positive  button-small taille2">
+                  Sous Category
+              </a>
+            </div>
+
+        </div>
+        <div class="row nbre">
+            <span class="item-note">30 categories</span>
+        </div>
+      <a ui-sref="app.detail">
+          <div class="media  border-bottom-grey margin-none padding-top-bottom ribbon-box padding-top-10">
+              <div class="pull-left text-center iconsize" >
+                   <span class="photo-count">
+                      <i class="icon ion-camera"></i>
+                      2
+                  </span>
+                  <img  src="img/1.jpg" class="media-object left-img-small img-thumbnail" >
+
+              </div>
+              <div class="media-body" style="padding-right: 3px; padding-left: 3px">
+                  <div class="">
+                      <h3 class="media-heading ellipsis text-lowercase">
+                          <strong>Google drops Nexus 4 by $100, offers 15 day price protection refund</strong>
+                      </h3>
+                      <div class="ellipsis bottom-buffer-10">
+            <span class="date grey">
+             <i class="icon ion-android-time grey"></i>
+              il ya 15 mins
+            </span>&nbsp;
+            <span class="c_ads">
+            <em>
+                <i class="icon ion-location grey"></i>
+                <span>Douala</span>
+            </em>
+            </span></div>
+                      <div class="bottom-buffer-10">
+                          <label class="label-light margin-right-5">Memoire 16Go</label>
+                          <label class="label-light margin-right-5"> Camera 5 MP</label>
+                      </div>
+                      <div>
+              <span class="label-light font-size-16 margin-right-5">
+                  <i class="icon ion-pricetags light-grey"></i> 150 000 FCFA
+              </span>&nbsp;
+                          <strong class="text-success font-size-16">
+                              <i class="icon ion-checkmark-circled text-success"></i>
+                              negociable
+                          </strong>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </a>
+    </ion-content>
+</ion-view>
